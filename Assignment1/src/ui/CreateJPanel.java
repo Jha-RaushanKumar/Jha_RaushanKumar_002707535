@@ -5,8 +5,13 @@
 package ui;
 
 import java.io.File;
+import java.text.DateFormat;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.HashSet;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 import javax.swing.JFileChooser;
 import javax.swing.JOptionPane;
 import javax.swing.filechooser.FileNameExtensionFilter;
@@ -270,48 +275,51 @@ public class CreateJPanel extends javax.swing.JPanel {
     private void buttonSaveActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonSaveActionPerformed
         // TODO add your handling code here:
         
-        String name = txtName.getText();
-        int empId = Integer.parseInt(txtEmpId.getText());
-        int age = Integer.parseInt(txtAge.getText());
-        String gender = txtGender.getText();
-        String startDate = txtStartDate.getText();
-        String level = txtLevel.getText();
-        String teamInfo = txtTeamInfo.getText();
-        String positionTitle = txtPositionTitle.getText();
-        String cellPhone = txtCellPhone.getText();
-        String emailAddress = txtEmailAddress.getText();
-        String photo = txtPhoto.getText();
+        boolean isValid = this.validateEmployee();
+        
+        if(isValid){
+            String name = txtName.getText();
+            int empId = Integer.parseInt(txtEmpId.getText());
+            int age = Integer.parseInt(txtAge.getText());
+            String gender = txtGender.getText();
+            String startDate = txtStartDate.getText();
+            String level = txtLevel.getText();
+            String teamInfo = txtTeamInfo.getText();
+            String positionTitle = txtPositionTitle.getText();
+            String cellPhone = txtCellPhone.getText();
+            String emailAddress = txtEmailAddress.getText();
+            String photo = txtPhoto.getText();
         
         
-        Employee emp = list_emp.addEmployee();
+            Employee emp = list_emp.addEmployee();
         
-        emp.setName(name);
-        emp.setEmpId(empId);
-        emp.setAge(age);
-        emp.setGender(gender);
-        emp.setStartDate(startDate);
-        emp.setLevel(level);
-        emp.setTeamInfo(teamInfo);
-        emp.setPositionTitle(positionTitle);
-        emp.setPhoneNumber(cellPhone);
-        emp.setEmailAddress(emailAddress);
-        emp.setPhoto(photo);
+            emp.setName(name);
+            emp.setEmpId(empId);
+            emp.setAge(age);
+            emp.setGender(gender);
+            emp.setStartDate(startDate);
+            emp.setLevel(level);
+            emp.setTeamInfo(teamInfo);
+            emp.setPositionTitle(positionTitle);
+            emp.setPhoneNumber(cellPhone);
+            emp.setEmailAddress(emailAddress);
+            emp.setPhoto(photo);
         
         
-        JOptionPane.showMessageDialog(this,"Employee added successfully");
+            JOptionPane.showMessageDialog(this,"Employee added successfully");
         
-        txtName.setText("");
-        txtEmpId.setText("");
-        txtAge.setText("");
-        txtGender.setText("");
-        txtStartDate.setText("");
-        txtLevel.setText("");
-        txtTeamInfo.setText("");
-        txtPositionTitle.setText("");
-        txtCellPhone.setText("");
-        txtEmailAddress.setText("");
-        txtPhoto.setText("");
-        
+            txtName.setText("");
+            txtEmpId.setText("");
+            txtAge.setText("");
+            txtGender.setText("");
+            txtStartDate.setText("");
+            txtLevel.setText("");
+            txtTeamInfo.setText("");
+            txtPositionTitle.setText("");
+            txtCellPhone.setText("");
+            txtEmailAddress.setText("");
+            txtPhoto.setText("");
+        }    
         
     }//GEN-LAST:event_buttonSaveActionPerformed
 
@@ -340,6 +348,89 @@ public class CreateJPanel extends javax.swing.JPanel {
     }//GEN-LAST:event_buttonPhotoActionPerformed
 
 
+    public boolean validateEmployee(){
+        
+        if(txtName.getText().length() <= 0){
+            JOptionPane.showMessageDialog(this, "Please Enter Name");
+            return false;
+        }
+        
+        if( txtEmpId.getText().length() == 0 || (!txtEmpId.getText().matches("[0-9]+"))){
+            JOptionPane.showMessageDialog(this, "Please Enter Correct Emp ID");
+            return false;
+        }
+        
+        if( txtAge.getText().length() == 0 || (!txtAge.getText().matches("[0-9]+"))){
+            JOptionPane.showMessageDialog(this, "Please Enter Correct Age");
+            return false;
+        }
+        
+        if( txtGender.getText().length() == 0 || (!txtGender.getText().matches("[A-Za-z]+"))){
+            JOptionPane.showMessageDialog(this, "Please Enter Valid Gender");
+            return false;
+        }
+        
+        if (!isStartDateValid(txtStartDate.getText())) {
+            JOptionPane.showMessageDialog(this, "Please Enter date in mm/dd/yyyy format");
+            return false;
+        }
+        
+        if( txtLevel.getText().length() == 0 || (!txtLevel.getText().matches("[A-Za-z]+"))){
+            JOptionPane.showMessageDialog(this, "Please Enter Valid Level");
+            return false;
+        }
+        
+        if( txtTeamInfo.getText().length() == 0 || (!txtTeamInfo.getText().matches("[A-Za-z]+"))){
+            JOptionPane.showMessageDialog(this, "Please Enter Valid Team Info");
+            return false;
+        }
+        
+        if( txtPositionTitle.getText().length() == 0 || (!txtPositionTitle.getText().matches("[A-Za-z]+"))){
+            JOptionPane.showMessageDialog(this, "Please Enter Valid Position Title");
+            return false;
+        }
+        
+        if ( txtCellPhone.getText().length() != 10 || (!txtCellPhone.getText().matches("[0-9]+")) ) {
+            JOptionPane.showMessageDialog(this, "Please Enter Correct Cell Phone Number");
+            return false;
+        }
+        
+        if (!isEmailValid(txtEmailAddress.getText())) {
+            JOptionPane.showMessageDialog(this, "Please Enter valid Email Address");
+            return false;
+        }
+        
+        if (txtPhoto.getText().length() == 0) {
+            JOptionPane.showMessageDialog(this, "Please Upload your Photo");
+            return false;
+        }
+        
+        return true;
+    }
+    
+    public static boolean isEmailValid(String email) {
+        Pattern emailPattern = Pattern.compile("^(?=.{1,64}@)[A-Za-z0-9_-]+(\\.[A-Za-z0-9_-]+)*@" 
+        + "[^-][A-Za-z0-9-]+(\\.[A-Za-z0-9-]+)*(\\.[A-Za-z]{2,})$");
+        Matcher matcher = emailPattern.matcher(email);
+
+        if (matcher.matches()) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+    
+    public static boolean isStartDateValid(String startDate) {
+        DateFormat dateFormat = new SimpleDateFormat("MM/dd/yyyy");
+        dateFormat.setLenient(false);
+        try {
+            dateFormat.parse(startDate);
+        } catch (ParseException e) {
+            return false;
+        }
+        return true;  
+    }
+            
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton buttonPhoto;
     private javax.swing.JButton buttonSave;

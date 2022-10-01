@@ -33,6 +33,17 @@ public class EmployeeList {
         return emp;
     }
     
+    public Employee getEmployee(String name){
+        
+        for (Employee emp : list_emp) {
+ 
+            if (emp.getName() == name) {
+                return emp;
+            }
+        }
+        return null;
+    }
+    
     public void deleteEmployee(String name){
         
         for (Employee emp : list_emp) {

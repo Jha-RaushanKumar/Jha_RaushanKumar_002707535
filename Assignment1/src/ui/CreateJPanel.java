@@ -136,10 +136,10 @@ public class CreateJPanel extends javax.swing.JPanel {
         lavelPhoto.setForeground(new java.awt.Color(0, 0, 153));
         lavelPhoto.setText("Photo");
 
-        jPanel1.setBackground(new java.awt.Color(245, 249, 254));
+        jPanel1.setBackground(new java.awt.Color(200, 200, 200));
 
         labelTitle.setBackground(new java.awt.Color(245, 249, 254));
-        labelTitle.setFont(new java.awt.Font("Segoe UI Emoji", 0, 24)); // NOI18N
+        labelTitle.setFont(new java.awt.Font("Segoe UI Emoji", 1, 24)); // NOI18N
         labelTitle.setForeground(new java.awt.Color(51, 0, 153));
         labelTitle.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         labelTitle.setText("Create Employee");

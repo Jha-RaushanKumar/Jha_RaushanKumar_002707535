@@ -33,44 +33,52 @@
                   </Group>
                   <Group type="102" alignment="0" attributes="0">
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Group type="102" alignment="0" attributes="0">
-                              <Group type="103" groupAlignment="1" attributes="0">
-                                  <Component id="labelAge" alignment="0" min="-2" max="-2" attributes="0"/>
-                                  <Component id="labelName" alignment="0" min="-2" pref="50" max="-2" attributes="0"/>
-                              </Group>
-                              <EmptySpace min="76" pref="76" max="-2" attributes="0"/>
+                          <Group type="102" attributes="0">
                               <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="txtName" alignment="0" min="-2" pref="98" max="-2" attributes="0"/>
-                                  <Component id="txtAge" alignment="0" min="-2" pref="98" max="-2" attributes="0"/>
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <Group type="103" groupAlignment="1" attributes="0">
+                                          <Component id="labelAge" alignment="0" min="-2" max="-2" attributes="0"/>
+                                          <Component id="labelName" alignment="0" min="-2" pref="50" max="-2" attributes="0"/>
+                                      </Group>
+                                      <EmptySpace min="76" pref="76" max="-2" attributes="0"/>
+                                      <Group type="103" groupAlignment="0" attributes="0">
+                                          <Component id="txtName" alignment="0" min="-2" pref="98" max="-2" attributes="0"/>
+                                          <Component id="txtAge" alignment="0" min="-2" pref="98" max="-2" attributes="0"/>
+                                      </Group>
+                                  </Group>
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <Group type="103" groupAlignment="0" attributes="0">
+                                          <Component id="labelStartDate" alignment="0" min="-2" max="-2" attributes="0"/>
+                                          <Component id="labelCellPhone" alignment="0" min="-2" max="-2" attributes="0"/>
+                                          <Component id="labelTeamInfo" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      </Group>
+                                      <EmptySpace min="-2" pref="36" max="-2" attributes="0"/>
+                                      <Group type="103" groupAlignment="0" attributes="0">
+                                          <Component id="txtTeamInfo" min="-2" pref="98" max="-2" attributes="0"/>
+                                          <Component id="txtCellPhone" min="-2" pref="98" max="-2" attributes="0"/>
+                                          <Component id="txtStartDate" min="-2" pref="98" max="-2" attributes="0"/>
+                                      </Group>
+                                  </Group>
+                              </Group>
+                              <EmptySpace min="-2" pref="110" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Component id="labelGender" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="labelLevel" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="labelPositionTitle" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="labelEmailAddress" alignment="0" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace min="-2" pref="54" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Component id="txtPositionTitle" min="-2" pref="89" max="-2" attributes="0"/>
+                                  <Component id="txtLevel" min="-2" pref="89" max="-2" attributes="0"/>
+                                  <Component id="txtGender" min="-2" pref="89" max="-2" attributes="0"/>
+                                  <Component id="txtEmailAddress" alignment="0" min="-2" pref="89" max="-2" attributes="0"/>
                               </Group>
                           </Group>
                           <Group type="102" alignment="0" attributes="0">
-                              <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="labelStartDate" alignment="0" min="-2" max="-2" attributes="0"/>
-                                  <Component id="labelCellPhone" alignment="0" min="-2" max="-2" attributes="0"/>
-                                  <Component id="labelTeamInfo" alignment="0" min="-2" max="-2" attributes="0"/>
-                              </Group>
-                              <EmptySpace min="-2" pref="36" max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="txtTeamInfo" min="-2" pref="98" max="-2" attributes="0"/>
-                                  <Component id="txtCellPhone" min="-2" pref="98" max="-2" attributes="0"/>
-                                  <Component id="txtStartDate" min="-2" pref="98" max="-2" attributes="0"/>
-                              </Group>
+                              <EmptySpace min="-2" pref="253" max="-2" attributes="0"/>
+                              <Component id="buttonUpdate" min="-2" max="-2" attributes="0"/>
                           </Group>
-                      </Group>
-                      <EmptySpace min="-2" pref="110" max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="labelGender" alignment="0" min="-2" max="-2" attributes="0"/>
-                          <Component id="labelLevel" alignment="0" min="-2" max="-2" attributes="0"/>
-                          <Component id="labelPositionTitle" alignment="0" min="-2" max="-2" attributes="0"/>
-                          <Component id="labelEmailAddress" alignment="0" min="-2" max="-2" attributes="0"/>
-                      </Group>
-                      <EmptySpace min="-2" pref="54" max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="txtPositionTitle" min="-2" pref="89" max="-2" attributes="0"/>
-                          <Component id="txtLevel" min="-2" pref="89" max="-2" attributes="0"/>
-                          <Component id="txtGender" min="-2" pref="89" max="-2" attributes="0"/>
-                          <Component id="txtEmailAddress" alignment="0" min="-2" pref="89" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace max="32767" attributes="0"/>
                       <Component id="labelPhoto" min="-2" pref="179" max="-2" attributes="0"/>
@@ -142,91 +150,100 @@
                   <Component id="buttonDelete" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="buttonView" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
-              <EmptySpace min="-2" pref="8" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" attributes="0">
-                      <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="labelName" alignment="3" min="-2" pref="28" max="-2" attributes="0"/>
-                          <Component id="txtName" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="labelEmpId" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="txtEmpId" alignment="3" min="-2" max="-2" attributes="0"/>
-                      </Group>
-                      <EmptySpace type="separate" max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="labelAge" alignment="0" min="-2" max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="txtGender" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="labelGender" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="txtAge" alignment="3" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                      </Group>
-                      <EmptySpace type="separate" max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="labelStartDate" alignment="0" min="-2" max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="labelLevel" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="txtLevel" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="txtStartDate" alignment="3" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                      </Group>
-                      <EmptySpace type="separate" max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="txtPositionTitle" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="labelPositionTitle" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="labelTeamInfo" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="txtTeamInfo" alignment="3" min="-2" max="-2" attributes="0"/>
-                      </Group>
-                      <EmptySpace type="separate" max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="txtCellPhone" alignment="0" min="-2" max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="labelCellPhone" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="txtEmailAddress" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="labelEmailAddress" alignment="3" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                      </Group>
-                  </Group>
-                  <Component id="labelPhoto" min="-2" pref="194" max="-2" attributes="0"/>
-              </Group>
-              <EmptySpace type="separate" max="-2" attributes="0"/>
-              <Component id="jPanel2" min="-2" max="-2" attributes="0"/>
-              <EmptySpace max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="0" attributes="0">
-                  <Component id="jSeparator2" max="32767" attributes="0"/>
-                  <Group type="102" attributes="0">
+                      <EmptySpace min="-2" pref="8" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="102" attributes="0">
                               <Group type="103" groupAlignment="3" attributes="0">
-                                  <Component id="buttonFilterName" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="txtFilterName" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="labelName" alignment="3" min="-2" pref="28" max="-2" attributes="0"/>
+                                  <Component id="txtName" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="labelEmpId" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="txtEmpId" alignment="3" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace type="separate" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Component id="labelAge" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="3" attributes="0">
+                                      <Component id="txtGender" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="labelGender" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="txtAge" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                              </Group>
+                              <EmptySpace type="separate" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Component id="labelStartDate" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="3" attributes="0">
+                                      <Component id="labelLevel" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="txtLevel" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="txtStartDate" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  </Group>
                               </Group>
                               <EmptySpace type="separate" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="3" attributes="0">
-                                  <Component id="txtFilterEmpId" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="buttonFilterEmpId" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="txtPositionTitle" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="labelPositionTitle" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="labelTeamInfo" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="txtTeamInfo" alignment="3" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace type="separate" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Component id="txtCellPhone" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="3" attributes="0">
+                                      <Component id="labelCellPhone" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="txtEmailAddress" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="labelEmailAddress" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  </Group>
                               </Group>
                           </Group>
-                          <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="txtFilterPositionTitle" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="buttonFilterPositionTitle" alignment="3" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                          <Group type="102" attributes="0">
-                              <Group type="103" groupAlignment="3" attributes="0">
-                                  <Component id="txtFilterTeamInfo" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="buttonFilterTeamInfo" alignment="3" min="-2" max="-2" attributes="0"/>
-                              </Group>
-                              <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="3" attributes="0">
-                                  <Component id="txtFilterLevel" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="buttonFilterLevel" alignment="3" min="-2" max="-2" attributes="0"/>
-                              </Group>
-                          </Group>
+                          <Component id="labelPhoto" min="-2" pref="194" max="-2" attributes="0"/>
                       </Group>
-                      <EmptySpace min="0" pref="35" max="32767" attributes="0"/>
+                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                      <Component id="jPanel2" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Component id="jSeparator2" max="32767" attributes="0"/>
+                          <Group type="102" attributes="0">
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Group type="102" attributes="0">
+                                      <Group type="103" groupAlignment="3" attributes="0">
+                                          <Component id="buttonFilterName" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          <Component id="txtFilterName" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      </Group>
+                                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                                      <Group type="103" groupAlignment="3" attributes="0">
+                                          <Component id="txtFilterEmpId" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          <Component id="buttonFilterEmpId" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      </Group>
+                                  </Group>
+                                  <Group type="103" groupAlignment="3" attributes="0">
+                                      <Component id="txtFilterPositionTitle" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="buttonFilterPositionTitle" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <Group type="102" attributes="0">
+                                      <Group type="103" groupAlignment="3" attributes="0">
+                                          <Component id="txtFilterTeamInfo" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          <Component id="buttonFilterTeamInfo" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      </Group>
+                                      <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
+                                      <Group type="103" groupAlignment="3" attributes="0">
+                                          <Component id="txtFilterLevel" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          <Component id="buttonFilterLevel" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      </Group>
+                                  </Group>
+                              </Group>
+                              <EmptySpace min="0" pref="35" max="32767" attributes="0"/>
+                          </Group>
+                          <Component id="jSeparator1" alignment="0" max="32767" attributes="0"/>
+                      </Group>
+                      <EmptySpace max="-2" attributes="0"/>
                   </Group>
-                  <Component id="jSeparator1" alignment="0" max="32767" attributes="0"/>
+                  <Group type="102" alignment="1" attributes="0">
+                      <EmptySpace max="32767" attributes="0"/>
+                      <Component id="buttonUpdate" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="141" max="-2" attributes="0"/>
+                  </Group>
               </Group>
-              <EmptySpace max="-2" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -623,6 +640,14 @@
       </Properties>
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="buttonFilterPositionTitleActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JButton" name="buttonUpdate">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Update"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="buttonUpdateActionPerformed"/>
       </Events>
     </Component>
   </SubComponents>

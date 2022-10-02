@@ -27,11 +27,11 @@ public class CreateJPanel extends javax.swing.JPanel {
     /**
      * Creates new form CreateJPanel
      */
-    EmployeeList list_emp;
+    EmployeeList listEmp;
     
-    public CreateJPanel(EmployeeList list_emp) {
+    public CreateJPanel(EmployeeList listEmp) {
         initComponents();
-        this.list_emp = list_emp;
+        this.listEmp = listEmp;
     }
 
     /**
@@ -291,20 +291,7 @@ public class CreateJPanel extends javax.swing.JPanel {
             String photo = txtPhoto.getText();
         
         
-            Employee emp = list_emp.addEmployee();
-        
-            emp.setName(name);
-            emp.setEmpId(empId);
-            emp.setAge(age);
-            emp.setGender(gender);
-            emp.setStartDate(startDate);
-            emp.setLevel(level);
-            emp.setTeamInfo(teamInfo);
-            emp.setPositionTitle(positionTitle);
-            emp.setPhoneNumber(cellPhone);
-            emp.setEmailAddress(emailAddress);
-            emp.setPhoto(photo);
-        
+            listEmp.addEmployee(name, empId, age, gender, startDate, level, teamInfo, positionTitle,cellPhone,emailAddress,photo);        
         
             JOptionPane.showMessageDialog(this,"Employee added successfully");
         
@@ -344,7 +331,7 @@ public class CreateJPanel extends javax.swing.JPanel {
         if (a == JFileChooser.APPROVE_OPTION) {
             txtPhoto.setText(file.getSelectedFile().getAbsolutePath());
         }
-         JOptionPane.showMessageDialog(null, "Image Uploaded");
+         JOptionPane.showMessageDialog(this, "Image Uploaded");
     }//GEN-LAST:event_buttonPhotoActionPerformed
 
 

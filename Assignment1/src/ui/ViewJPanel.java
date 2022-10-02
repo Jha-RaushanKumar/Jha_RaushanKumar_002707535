@@ -5,6 +5,7 @@
 package ui;
 
 import java.awt.Image;
+import java.util.ArrayList;
 import javax.swing.ImageIcon;
 import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
@@ -86,11 +87,9 @@ public class ViewJPanel extends javax.swing.JPanel {
         jLabel1 = new javax.swing.JLabel();
         buttonFilterName = new javax.swing.JButton();
         buttonFilterEmpId = new javax.swing.JButton();
-        buttonFilterStartDate = new javax.swing.JButton();
         buttonFilterLevel = new javax.swing.JButton();
         txtFilterName = new javax.swing.JTextField();
         txtFilterEmpId = new javax.swing.JTextField();
-        txtFilterStartDate = new javax.swing.JTextField();
         txtFilterLevel = new javax.swing.JTextField();
         jSeparator1 = new javax.swing.JSeparator();
         txtFilterTeamInfo = new javax.swing.JTextField();
@@ -234,6 +233,11 @@ public class ViewJPanel extends javax.swing.JPanel {
         );
 
         buttonFilterName.setText("By Name");
+        buttonFilterName.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                buttonFilterNameActionPerformed(evt);
+            }
+        });
 
         buttonFilterEmpId.setText("By EmpID");
         buttonFilterEmpId.addActionListener(new java.awt.event.ActionListener() {
@@ -241,8 +245,6 @@ public class ViewJPanel extends javax.swing.JPanel {
                 buttonFilterEmpIdActionPerformed(evt);
             }
         });
-
-        buttonFilterStartDate.setText("By Start Date");
 
         buttonFilterLevel.setText("By Level");
         buttonFilterLevel.addActionListener(new java.awt.event.ActionListener() {
@@ -262,8 +264,18 @@ public class ViewJPanel extends javax.swing.JPanel {
         jSeparator2.setOrientation(javax.swing.SwingConstants.VERTICAL);
 
         buttonFilterTeamInfo.setText("By Team Info");
+        buttonFilterTeamInfo.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                buttonFilterTeamInfoActionPerformed(evt);
+            }
+        });
 
         buttonFilterPositionTitle.setText("By Position Title");
+        buttonFilterPositionTitle.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                buttonFilterPositionTitleActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
@@ -339,23 +351,19 @@ public class ViewJPanel extends javax.swing.JPanel {
                         .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(txtFilterStartDate, javax.swing.GroupLayout.DEFAULT_SIZE, 81, Short.MAX_VALUE)
-                            .addComponent(txtFilterLevel))
-                        .addGap(33, 33, 33)
+                            .addComponent(txtFilterLevel, javax.swing.GroupLayout.DEFAULT_SIZE, 81, Short.MAX_VALUE)
+                            .addComponent(txtFilterTeamInfo))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 37, Short.MAX_VALUE)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(buttonFilterStartDate, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(buttonFilterTeamInfo, javax.swing.GroupLayout.DEFAULT_SIZE, 114, Short.MAX_VALUE)
                             .addComponent(buttonFilterLevel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 27, Short.MAX_VALUE)
+                        .addGap(37, 37, 37)
                         .addComponent(jSeparator2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(txtFilterTeamInfo, javax.swing.GroupLayout.DEFAULT_SIZE, 85, Short.MAX_VALUE)
-                            .addComponent(txtFilterPositionTitle))
-                        .addGap(29, 29, 29)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(buttonFilterPositionTitle, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(buttonFilterTeamInfo, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                        .addGap(78, 78, 78)))
+                        .addGap(26, 26, 26)
+                        .addComponent(txtFilterPositionTitle, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(35, 35, 35)
+                        .addComponent(buttonFilterPositionTitle)
+                        .addGap(33, 33, 33)))
                 .addContainerGap())
         );
         layout.setVerticalGroup(
@@ -378,17 +386,19 @@ public class ViewJPanel extends javax.swing.JPanel {
                             .addComponent(labelEmpId)
                             .addComponent(txtEmpId, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(18, 18, 18)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(txtGender, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(labelGender)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(labelAge)
-                            .addComponent(txtAge, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                .addComponent(txtGender, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(labelGender)
+                                .addComponent(txtAge, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                         .addGap(18, 18, 18)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(labelLevel)
-                            .addComponent(txtLevel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(labelStartDate)
-                            .addComponent(txtStartDate, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                .addComponent(labelLevel)
+                                .addComponent(txtLevel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(txtStartDate, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                         .addGap(18, 18, 18)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(txtPositionTitle, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -396,11 +406,12 @@ public class ViewJPanel extends javax.swing.JPanel {
                             .addComponent(labelTeamInfo)
                             .addComponent(txtTeamInfo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(18, 18, 18)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(txtCellPhone, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(labelCellPhone)
-                            .addComponent(txtEmailAddress, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(labelEmailAddress)))
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                .addComponent(labelCellPhone)
+                                .addComponent(txtEmailAddress, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(labelEmailAddress))))
                     .addComponent(labelPhoto, javax.swing.GroupLayout.PREFERRED_SIZE, 194, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -417,18 +428,13 @@ public class ViewJPanel extends javax.swing.JPanel {
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                                     .addComponent(txtFilterEmpId, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(buttonFilterEmpId)))
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                .addComponent(txtFilterPositionTitle, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(buttonFilterPositionTitle))
                             .addGroup(layout.createSequentialGroup()
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                                     .addComponent(txtFilterTeamInfo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(buttonFilterTeamInfo))
-                                .addGap(18, 18, 18)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                    .addComponent(txtFilterPositionTitle, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(buttonFilterPositionTitle)))
-                            .addGroup(layout.createSequentialGroup()
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                    .addComponent(buttonFilterStartDate)
-                                    .addComponent(txtFilterStartDate, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                                 .addGap(18, 18, 18)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                                     .addComponent(txtFilterLevel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -511,11 +517,33 @@ public class ViewJPanel extends javax.swing.JPanel {
 
     private void buttonFilterEmpIdActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonFilterEmpIdActionPerformed
         // TODO add your handling code here:
+        ArrayList<Employee> empList = list_emp.empIdFilter(Integer.parseInt(txtFilterEmpId.getText()));
+        populateTable(empList);
     }//GEN-LAST:event_buttonFilterEmpIdActionPerformed
 
     private void buttonFilterLevelActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonFilterLevelActionPerformed
         // TODO add your handling code here:
+        ArrayList<Employee> empList = list_emp.levelFilter(txtFilterLevel.getText());
+        populateTable(empList);
     }//GEN-LAST:event_buttonFilterLevelActionPerformed
+
+    private void buttonFilterNameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonFilterNameActionPerformed
+        // TODO add your handling code here:
+        ArrayList<Employee> empList = list_emp.nameFilter(txtFilterName.getText());
+        populateTable(empList);
+    }//GEN-LAST:event_buttonFilterNameActionPerformed
+
+    private void buttonFilterPositionTitleActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonFilterPositionTitleActionPerformed
+        // TODO add your handling code here:
+        ArrayList<Employee> empList = list_emp.positionFilter(txtFilterPositionTitle.getText());
+        populateTable(empList);
+    }//GEN-LAST:event_buttonFilterPositionTitleActionPerformed
+
+    private void buttonFilterTeamInfoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonFilterTeamInfoActionPerformed
+        // TODO add your handling code here:
+        ArrayList<Employee> empList = list_emp.teamInfoFilter(txtFilterTeamInfo.getText());
+        populateTable(empList);
+    }//GEN-LAST:event_buttonFilterTeamInfoActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
@@ -524,7 +552,6 @@ public class ViewJPanel extends javax.swing.JPanel {
     private javax.swing.JButton buttonFilterLevel;
     private javax.swing.JButton buttonFilterName;
     private javax.swing.JButton buttonFilterPositionTitle;
-    private javax.swing.JButton buttonFilterStartDate;
     private javax.swing.JButton buttonFilterTeamInfo;
     private javax.swing.JButton buttonView;
     private javax.swing.JLabel jLabel1;
@@ -554,7 +581,6 @@ public class ViewJPanel extends javax.swing.JPanel {
     private javax.swing.JTextField txtFilterLevel;
     private javax.swing.JTextField txtFilterName;
     private javax.swing.JTextField txtFilterPositionTitle;
-    private javax.swing.JTextField txtFilterStartDate;
     private javax.swing.JTextField txtFilterTeamInfo;
     private javax.swing.JTextField txtGender;
     private javax.swing.JTextField txtLevel;
@@ -570,6 +596,31 @@ public class ViewJPanel extends javax.swing.JPanel {
         model.setRowCount(0);
         
         for(Employee emp : list_emp.getList_emp()){
+            
+            Object[] data = new Object[11];
+            data[0] = emp.getName();
+            data[1] =  emp.getEmpId();
+            data[2] = emp.getAge();
+            data[3] = emp.getGender();
+            data[4] = emp.getStartDate();
+            data[5] = emp.getLevel();
+            data[6] = emp.getTeamInfo();
+            data[7] = emp.getPositionTitle();
+            data[8] = emp.getPhoneNumber();
+            data[9] = emp.getEmailAddress();
+            data[10] = emp.getPhoto();
+            
+            model.addRow(data);
+            
+        }
+    }
+    
+    private void populateTable(ArrayList<Employee> empList) {
+        
+        DefaultTableModel model = (DefaultTableModel) tableEmp.getModel();
+        model.setRowCount(0);
+        
+        for(Employee emp : empList){
             
             Object[] data = new Object[11];
             data[0] = emp.getName();

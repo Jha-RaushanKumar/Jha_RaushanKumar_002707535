@@ -109,27 +109,21 @@
                       <Component id="jSeparator1" min="-2" max="-2" attributes="0"/>
                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                          <Component id="txtFilterStartDate" pref="81" max="32767" attributes="0"/>
-                          <Component id="txtFilterLevel" max="32767" attributes="0"/>
+                          <Component id="txtFilterLevel" pref="81" max="32767" attributes="0"/>
+                          <Component id="txtFilterTeamInfo" max="32767" attributes="0"/>
                       </Group>
-                      <EmptySpace min="-2" pref="33" max="-2" attributes="0"/>
+                      <EmptySpace pref="37" max="32767" attributes="0"/>
                       <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                          <Component id="buttonFilterStartDate" max="32767" attributes="0"/>
+                          <Component id="buttonFilterTeamInfo" pref="114" max="32767" attributes="0"/>
                           <Component id="buttonFilterLevel" max="32767" attributes="0"/>
                       </Group>
-                      <EmptySpace pref="27" max="32767" attributes="0"/>
+                      <EmptySpace min="-2" pref="37" max="-2" attributes="0"/>
                       <Component id="jSeparator2" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace type="separate" max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                          <Component id="txtFilterTeamInfo" pref="85" max="32767" attributes="0"/>
-                          <Component id="txtFilterPositionTitle" max="32767" attributes="0"/>
-                      </Group>
-                      <EmptySpace min="-2" pref="29" max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                          <Component id="buttonFilterPositionTitle" max="32767" attributes="0"/>
-                          <Component id="buttonFilterTeamInfo" max="32767" attributes="0"/>
-                      </Group>
-                      <EmptySpace min="-2" pref="78" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="26" max="-2" attributes="0"/>
+                      <Component id="txtFilterPositionTitle" min="-2" pref="85" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="35" max="-2" attributes="0"/>
+                      <Component id="buttonFilterPositionTitle" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="33" max="-2" attributes="0"/>
                   </Group>
               </Group>
               <EmptySpace max="-2" attributes="0"/>
@@ -158,18 +152,22 @@
                           <Component id="txtEmpId" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="txtGender" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="labelGender" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
                           <Component id="labelAge" alignment="0" min="-2" max="-2" attributes="0"/>
-                          <Component id="txtAge" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="3" attributes="0">
+                              <Component id="txtGender" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="labelGender" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="txtAge" alignment="3" min="-2" max="-2" attributes="0"/>
+                          </Group>
                       </Group>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="labelLevel" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="txtLevel" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
                           <Component id="labelStartDate" alignment="0" min="-2" max="-2" attributes="0"/>
-                          <Component id="txtStartDate" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="3" attributes="0">
+                              <Component id="labelLevel" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="txtLevel" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="txtStartDate" alignment="3" min="-2" max="-2" attributes="0"/>
+                          </Group>
                       </Group>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
@@ -179,11 +177,13 @@
                           <Component id="txtTeamInfo" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="3" attributes="0">
+                      <Group type="103" groupAlignment="0" attributes="0">
                           <Component id="txtCellPhone" alignment="0" min="-2" max="-2" attributes="0"/>
-                          <Component id="labelCellPhone" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="txtEmailAddress" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="labelEmailAddress" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="3" attributes="0">
+                              <Component id="labelCellPhone" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="txtEmailAddress" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="labelEmailAddress" alignment="3" min="-2" max="-2" attributes="0"/>
+                          </Group>
                       </Group>
                   </Group>
                   <Component id="labelPhoto" min="-2" pref="194" max="-2" attributes="0"/>
@@ -206,23 +206,16 @@
                                   <Component id="buttonFilterEmpId" alignment="3" min="-2" max="-2" attributes="0"/>
                               </Group>
                           </Group>
+                          <Group type="103" groupAlignment="3" attributes="0">
+                              <Component id="txtFilterPositionTitle" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="buttonFilterPositionTitle" alignment="3" min="-2" max="-2" attributes="0"/>
+                          </Group>
                           <Group type="102" attributes="0">
                               <Group type="103" groupAlignment="3" attributes="0">
                                   <Component id="txtFilterTeamInfo" alignment="3" min="-2" max="-2" attributes="0"/>
                                   <Component id="buttonFilterTeamInfo" alignment="3" min="-2" max="-2" attributes="0"/>
                               </Group>
-                              <EmptySpace type="separate" max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="3" attributes="0">
-                                  <Component id="txtFilterPositionTitle" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="buttonFilterPositionTitle" alignment="3" min="-2" max="-2" attributes="0"/>
-                              </Group>
-                          </Group>
-                          <Group type="102" attributes="0">
-                              <Group type="103" groupAlignment="3" attributes="0">
-                                  <Component id="buttonFilterStartDate" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="txtFilterStartDate" alignment="3" min="-2" max="-2" attributes="0"/>
-                              </Group>
-                              <EmptySpace type="separate" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="3" attributes="0">
                                   <Component id="txtFilterLevel" alignment="3" min="-2" max="-2" attributes="0"/>
                                   <Component id="buttonFilterLevel" alignment="3" min="-2" max="-2" attributes="0"/>
@@ -573,6 +566,9 @@
       <Properties>
         <Property name="text" type="java.lang.String" value="By Name"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="buttonFilterNameActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JButton" name="buttonFilterEmpId">
       <Properties>
@@ -581,11 +577,6 @@
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="buttonFilterEmpIdActionPerformed"/>
       </Events>
-    </Component>
-    <Component class="javax.swing.JButton" name="buttonFilterStartDate">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="By Start Date"/>
-      </Properties>
     </Component>
     <Component class="javax.swing.JButton" name="buttonFilterLevel">
       <Properties>
@@ -598,8 +589,6 @@
     <Component class="javax.swing.JTextField" name="txtFilterName">
     </Component>
     <Component class="javax.swing.JTextField" name="txtFilterEmpId">
-    </Component>
-    <Component class="javax.swing.JTextField" name="txtFilterStartDate">
     </Component>
     <Component class="javax.swing.JTextField" name="txtFilterLevel">
     </Component>
@@ -624,11 +613,17 @@
       <Properties>
         <Property name="text" type="java.lang.String" value="By Team Info"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="buttonFilterTeamInfoActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JButton" name="buttonFilterPositionTitle">
       <Properties>
         <Property name="text" type="java.lang.String" value="By Position Title"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="buttonFilterPositionTitleActionPerformed"/>
+      </Events>
     </Component>
   </SubComponents>
 </Form>

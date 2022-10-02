@@ -12,30 +12,31 @@ import java.util.ArrayList;
  */
 public class EmployeeList {
     
-    private ArrayList<Employee> list_emp;
+    private ArrayList<Employee> listEmp;
     
     public EmployeeList(){
-        list_emp = new ArrayList<Employee>();
+        listEmp = new ArrayList<Employee>();
     }
 
     public ArrayList<Employee> getList_emp() {
-        return list_emp;
+        return listEmp;
     }
 
-    public void setList_emp(ArrayList<Employee> list_emp) {
-        this.list_emp = list_emp;
+    public void setList_emp(ArrayList<Employee> listEmp) {
+        this.listEmp = listEmp;
     }
     
-    public Employee addEmployee(){
-        
-        Employee emp = new Employee();
-        list_emp.add(emp);
-        return emp;
+    public void addEmployee(String name,int empId,int age, String gender,String startDate,String level,
+            String teamInfo,String positionTitle,String cellPhoneNumber,String emailAddress,String photo) {
+
+        Employee emp = new Employee(name, empId,age,gender,startDate,level,teamInfo,positionTitle,cellPhoneNumber,emailAddress,photo);
+
+        listEmp.add(emp);
     }
     
     public Employee getEmployee(String name){
         
-        for (Employee emp : list_emp) {
+        for (Employee emp : listEmp) {
  
             if (emp.getName() == name) {
                 return emp;
@@ -46,10 +47,10 @@ public class EmployeeList {
     
     public void deleteEmployee(String name){
         
-        for (Employee emp : list_emp) {
+        for (Employee emp : listEmp) {
  
             if (emp.getName() == name) {
-                list_emp.remove(emp);
+                listEmp.remove(emp);
                 break;
             }
         }
@@ -58,7 +59,7 @@ public class EmployeeList {
     public ArrayList<Employee> nameFilter(String name) {
 
         ArrayList<Employee> list = new ArrayList<>();
-        for (Employee emp : list_emp) {
+        for (Employee emp : listEmp) {
             if (emp.getName().matches(name)) {
                 list.add(emp);
             }
@@ -69,7 +70,7 @@ public class EmployeeList {
     public ArrayList<Employee> teamInfoFilter(String team) {
 
         ArrayList<Employee> list = new ArrayList<>();
-        for (Employee emp : list_emp) {
+        for (Employee emp : listEmp) {
             if (emp.getTeamInfo().matches(team)) {
                 list.add(emp);
             }
@@ -80,7 +81,7 @@ public class EmployeeList {
     public ArrayList<Employee> positionFilter(String position) {
 
         ArrayList<Employee> list = new ArrayList<>();
-        for (Employee emp : list_emp) {
+        for (Employee emp : listEmp) {
             if (emp.getPositionTitle().matches(position)) {
                 list.add(emp);
             }
@@ -90,7 +91,7 @@ public class EmployeeList {
     public ArrayList<Employee> levelFilter(String level) {
 
         ArrayList<Employee> list = new ArrayList<>();
-        for (Employee emp : list_emp) {
+        for (Employee emp : listEmp) {
             if (emp.getLevel().matches(level)) {
                 list.add(emp);
             }
@@ -101,7 +102,7 @@ public class EmployeeList {
     public ArrayList<Employee> empIdFilter(int eId) {
 
         ArrayList<Employee> list = new ArrayList<>();
-        for (Employee emp : list_emp) {
+        for (Employee emp : listEmp) {
             if (emp.getEmpId() == eId) {
                 list.add(emp);
             }

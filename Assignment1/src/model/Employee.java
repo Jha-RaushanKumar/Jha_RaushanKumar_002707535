@@ -24,6 +24,23 @@ public class Employee {
     private String emailAddress;
     private String photo;
     
+    public Employee(String name,int empId,int age, String gender,String startDate,String level,
+            String teamInfo,String positionTitle,String phoneNumber,String emailAddress,String photo) {
+
+        this.name = name;
+        this.empId = empId;
+        this.age = age;
+        this.gender = gender;
+        this.startDate = startDate;
+        this.level = level;
+        this.teamInfo = teamInfo;
+        this.positionTitle = positionTitle;
+        this.phoneNumber = phoneNumber;
+        this.emailAddress = emailAddress;
+        this.photo = photo;
+
+    }
+    
 
     public String getName() {
         return name;

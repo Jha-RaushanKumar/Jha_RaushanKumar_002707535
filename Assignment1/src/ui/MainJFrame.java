@@ -72,10 +72,10 @@ public class MainJFrame extends javax.swing.JFrame {
             controlPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(controlPanelLayout.createSequentialGroup()
                 .addGap(108, 108, 108)
-                .addComponent(addEmp)
-                .addGap(58, 58, 58)
-                .addComponent(viewEmp)
-                .addContainerGap(410, Short.MAX_VALUE))
+                .addComponent(addEmp, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(30, 30, 30)
+                .addComponent(viewEmp, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(382, Short.MAX_VALUE))
         );
 
         splitPane.setLeftComponent(controlPanel);

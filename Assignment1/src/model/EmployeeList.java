@@ -55,5 +55,60 @@ public class EmployeeList {
         }
     }
     
+    public ArrayList<Employee> nameFilter(String name) {
+
+        ArrayList<Employee> list = new ArrayList<>();
+        for (Employee emp : list_emp) {
+            if (emp.getName().matches(name)) {
+                list.add(emp);
+            }
+        }
+        return list;
+    }
+    
+    public ArrayList<Employee> teamInfoFilter(String team) {
+
+        ArrayList<Employee> list = new ArrayList<>();
+        for (Employee emp : list_emp) {
+            if (emp.getTeamInfo().matches(team)) {
+                list.add(emp);
+            }
+        }
+        return list;
+    }
+    
+    public ArrayList<Employee> positionFilter(String position) {
+
+        ArrayList<Employee> list = new ArrayList<>();
+        for (Employee emp : list_emp) {
+            if (emp.getPositionTitle().matches(position)) {
+                list.add(emp);
+            }
+        }
+        return list;
+    }
+    public ArrayList<Employee> levelFilter(String level) {
+
+        ArrayList<Employee> list = new ArrayList<>();
+        for (Employee emp : list_emp) {
+            if (emp.getLevel().matches(level)) {
+                list.add(emp);
+            }
+        }
+        return list;
+    }
+    
+    public ArrayList<Employee> empIdFilter(int eId) {
+
+        ArrayList<Employee> list = new ArrayList<>();
+        for (Employee emp : list_emp) {
+            if (emp.getEmpId() == eId) {
+                list.add(emp);
+            }
+        }
+        return list;
+    }
+    
+    
     
 }

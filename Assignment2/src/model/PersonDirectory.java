@@ -17,7 +17,40 @@ public class PersonDirectory {
 
     public PersonDirectory() {
         persons = new ArrayList<>();
+       addPersons();
     }
+    
+    public void addPersons() {
+        Person p1 = new Person("Raushan",new House("75Aplhonsus",new City("Boston"),"MA",021200,new Community("Roxbury")),"Male","11/29/1997",1);
+        Person p2 = new Person("Gaurav",new House("75Aplhonsus",new City("Boston"),"MA",021200,new Community("Roxbury")),"Male","11/29/1997",2);
+        Person p3 = new Person("Rohit",new House("75Aplhonsus",new City("Boston"),"MA",021200,new Community("Roxbury")),"Male","11/29/1997",3);
+        Person p4 = new Person("Vishal",new House("75Aplhonsus",new City("Boston"),"MA",021200,new Community("Roxbury")),"Male","11/29/1997",4);
+        addPerson(p1);
+        addPerson(p2);
+        addPerson(p3);
+        addPerson(p4);
+
+        /*City c1 = new City("Boston", "MA", "USA");
+        City c2 = new City("New York", "NY", "USA");
+        City c3 = new City("Pune", "MH", "India");
+        City c4 = new City("Mumbai", "MH", "India");
+        City c5 = new City("San Francisco", "CA", "USA");
+        cities.add(c1);
+        cities.add(c2);
+        cities.add(c3);
+        cities.add(c4);
+        cities.add(c5);
+
+        Community co1 = new Community("Roxbury", cities.get(0));
+        Community co2 = new Community("New Jersey", cities.get(1));
+        Community co3 = new Community("Kothrud", cities.get(2));
+        Community co4 = new Community("Andheri", cities.get(3));
+        communities.add(co1);
+        communities.add(co2);
+        communities.add(co3);
+        communities.add(co4);*/
+    }
+    
     public void addPerson(Person person){
         persons.add(person);
     }
@@ -57,6 +90,7 @@ public class PersonDirectory {
             }
         }
     }
+    
     
     
     

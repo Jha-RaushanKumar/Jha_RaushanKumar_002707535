@@ -1,4 +1,0 @@
-UserInterface.CreateJPanel$1
-UserInterface.CreateJPanel$3
-UserInterface.CreateJPanel$2
-UserInterface.CreateJPanel

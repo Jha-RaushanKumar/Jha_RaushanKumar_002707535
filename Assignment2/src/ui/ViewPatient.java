@@ -429,7 +429,6 @@ public class ViewPatient extends javax.swing.JPanel {
         DefaultTableModel model = (DefaultTableModel) tablePatient.getModel();
         Patient patient = patientDirectory.getPatient(model.getValueAt(row_selected, 0).toString());
         House house = patient.getResidence();
-        Community comm = house.getCommunity();
         City city = house.getCity();
         Encounter en = patient.getEncounter();
         VitalSigns vs = en.getVitalSign();
@@ -442,7 +441,7 @@ public class ViewPatient extends javax.swing.JPanel {
         txtCity.setText(city.getCityName());
         txtState.setText(house.getState());
         txtZip.setText(String.valueOf(house.getPin()));
-        txtCommunity.setText(comm.getCommunity());
+        txtCommunity.setText(house.getCommunity());
        
         if(vs.getTemp() == 0){
              txtTemp.setText("");
@@ -481,7 +480,7 @@ public class ViewPatient extends javax.swing.JPanel {
             selected_row[i] = model.getValueAt(row_selected, i);
 
         }
-        
+        patientDirectory.deletePatient(model.getValueAt(row_selected, 0).toString());
         selected_row[0] = txtName.getText();
         selected_row[1] = txtGender.getText();
         selected_row[2] = txtDate.getText();
@@ -495,11 +494,10 @@ public class ViewPatient extends javax.swing.JPanel {
         
         Date resultdate = new Date(System.currentTimeMillis());
         City city = new City(selected_row[5].toString());
-        Community community = new Community(selected_row[8].toString());
         VitalSigns vs = new VitalSigns(0,0,0);
         Encounter encounter = new Encounter(vs,resultdate,null);
         
-        House house = new House(selected_row[4].toString(),city,selected_row[6].toString(),Integer.parseInt(selected_row[7].toString()),community);
+        House house = new House(selected_row[4].toString(),city,selected_row[6].toString(),Integer.parseInt(selected_row[7].toString()),selected_row[8].toString());
             
         patientDirectory.addPatient(selected_row[0].toString(),house,
                 selected_row[1].toString(),
@@ -655,7 +653,7 @@ private void populateTable() {
             data[5] = patient.getResidence().getCity().getCityName();
             data[6] = patient.getResidence().getState();
             data[7] = patient.getResidence().getPin();
-            data[8] = patient.getResidence().getCommunity().getCommunity();
+            data[8] = patient.getResidence().getCommunity();
             data[9] = patient.getPatientId();
             
             model.addRow(data);
@@ -679,7 +677,7 @@ private void populateTable(PatientDirectory patientDirectory1) {
             data[5] = patient.getResidence().getCity().getCityName();
             data[6] = patient.getResidence().getState();
             data[7] = patient.getResidence().getPin();
-            data[8] = patient.getResidence().getCommunity().getCommunity();
+            data[8] = patient.getResidence().getCommunity();
             data[9] = patient.getPatientId();
             
             model.addRow(data);

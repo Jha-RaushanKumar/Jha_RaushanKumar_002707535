@@ -13,15 +13,23 @@ public class House {
     private City city;
     private String state;
     private int pin;
-    private Community community;
+    private String community;
     
-    public House(String address, City city, String state, int pin, Community community){
+    public House(String address, City city, String state, int pin,String community){
         
         
         this.address = address;
         this.city = city;
         this.state = state;
         this.pin = pin;
+        this.community = community;
+    }
+
+    public String getCommunity() {
+        return community;
+    }
+
+    public void setCommunity(String community) {
         this.community = community;
     }
 
@@ -57,12 +65,9 @@ public class House {
         this.pin = pin;
     }
 
-    public Community getCommunity() {
-        return community;
+    String getHouse() {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
 
-    public void setCommunity(Community community) {
-        this.community = community;
-    }
     
 }

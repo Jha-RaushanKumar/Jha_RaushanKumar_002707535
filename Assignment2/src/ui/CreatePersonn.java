@@ -24,10 +24,12 @@ public class CreatePersonn extends javax.swing.JPanel {
      * Creates new form CreatePersonn
      */
     PersonDirectory personDirectory;
+    Community community;
 
-    public CreatePersonn(PersonDirectory personDirectory) {
+    public CreatePersonn(PersonDirectory personDirectory,Community community) {
         initComponents();
         this.personDirectory = personDirectory;
+        this.community = community;
     }
 
     /**
@@ -310,8 +312,9 @@ public boolean validateData() {
 
         if (validateData()) {
 
-            House house = new House(txtAddress.getText(), new City(txtCity.getText()), txtState.getText(), Integer.parseInt(txtZip.getText()), new Community(txtCommunity.getText()));
-
+            House house = new House(txtAddress.getText(), new City(txtCity.getText()), txtState.getText(), Integer.parseInt(txtZip.getText()), txtCommunity.getText());
+            
+            community.addHouse(house);
             Person person = new Person(txtName.getText(), house, txtGender.getText(), txtDate.getText(), Integer.parseInt(txtPersonId.getText()));
             personDirectory.addPerson(person);
 

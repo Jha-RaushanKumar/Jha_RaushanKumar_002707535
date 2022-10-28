@@ -13,17 +13,35 @@ import java.util.ArrayList;
 public class Hospital {
     
     private String hospitalName;
-    private ArrayList<Community> community;
+    private String community;
+    //private ArrayList<Community> community;
 
-    public Hospital(String hospitalName ){
+    public Hospital(String hospitalName, String community ){
         this.hospitalName = hospitalName;
+        this.community = community;
     }
 
-    public ArrayList<Community> getCommunity() {
+    /*public ArrayList<Community> getCommunity() {
         return community;
     }
 
     public void setCommunity(ArrayList<Community> community) {
+        this.community = community;
+    }*/
+
+    public String getHospitalName() {
+        return hospitalName;
+    }
+
+    public void setHospitalName(String hospitalName) {
+        this.hospitalName = hospitalName;
+    }
+
+    public String getCommunity() {
+        return community;
+    }
+
+    public void setCommunity(String community) {
         this.community = community;
     }
     

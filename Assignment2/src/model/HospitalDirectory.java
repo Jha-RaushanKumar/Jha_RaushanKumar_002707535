@@ -29,5 +29,36 @@ public class HospitalDirectory {
     public void setHospitals(ArrayList<Hospital> hospitals) {
         this.hospitals = hospitals;
     }
+    public Hospital getHospitals(String name){
+        
+        for (Hospital emp : hospitals) {
+ 
+            if (emp.getCommunity() == name) {
+                return emp;
+            }
+        }
+        return null;
+    }
+    
+    public HospitalDirectory commHosFilter(String name) {
+
+        HospitalDirectory list = new HospitalDirectory();
+        for (Hospital emp : hospitals) {
+            if (emp.getCommunity().equals(name)) {
+                list.addHospital(emp);
+            }
+        }
+        return list;
+    }
+    public void deleteHospital(String name){
+        
+        for (Hospital emp : hospitals) {
+ 
+            if (emp.getCommunity() == name) {
+                hospitals.remove(emp);
+                break;
+            }
+        }
+    }
     
 }

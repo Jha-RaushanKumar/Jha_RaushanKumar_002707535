@@ -12,27 +12,52 @@ import java.util.ArrayList;
  */
 public class Community {
     
-    private String community;
     private ArrayList<House> house;
     
-    public Community(String community){
-        this.community = community;
+    public Community(){
+        house = new ArrayList<>();
     }
-
-    public String getCommunity() {
-        return community;
-    }
-
-    public void setCommunity(String community) {
-        this.community = community;
+    public void addHouse(House h ){
+        house.add(h);
     }
 
     public ArrayList<House> getHouse() {
         return house;
     }
+    public House getHouses(String name){
+        
+        for (House emp : house) {
+ 
+            if (emp.getCommunity() == name) {
+                return emp;
+            }
+        }
+        return null;
+    }
 
     public void setHouse(ArrayList<House> house) {
         this.house = house;
+    }
+    
+    public Community commFilter(String name) {
+
+        Community list = new Community();
+        for (House emp : house) {
+            if (emp.getCommunity().equals(name)) {
+                list.addHouse(emp);
+            }
+        }
+        return list;
+    }
+    public void deleteHouse(String name){
+        
+        for (House emp : house) {
+ 
+            if (emp.getCommunity() == name) {
+                house.remove(emp);
+                break;
+            }
+        }
     }
     
     

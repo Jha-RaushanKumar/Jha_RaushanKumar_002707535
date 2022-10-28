@@ -20,11 +20,11 @@ public class PersonDirectory {
        //addPersons();
     }
     
-    public void addPersons() {
-        Person p1 = new Person("Raushan",new House("75Aplhonsus",new City("Boston"),"MA",021200,new Community("Roxbury")),"Male","11/29/1997",1);
-        Person p2 = new Person("Gaurav",new House("75Aplhonsus",new City("Boston"),"MA",021200,new Community("Roxbury")),"Male","11/29/1997",2);
-        Person p3 = new Person("Rohit",new House("75Aplhonsus",new City("Boston"),"MA",021200,new Community("Roxbury")),"Male","11/29/1997",3);
-        Person p4 = new Person("Vishal",new House("75Aplhonsus",new City("Boston"),"MA",021200,new Community("Roxbury")),"Male","11/29/1997",4);
+    /*public void addPersons() {
+        Person p1 = new Person("Raushan",new House("75Aplhonsus",new City("Boston"),"MA",021200),"Male","11/29/1997",1);
+        Person p2 = new Person("Gaurav",new House("75Aplhonsus",new City("Boston"),"MA",021200),"Male","11/29/1997",2);
+        Person p3 = new Person("Rohit",new House("75Aplhonsus",new City("Boston"),"MA",021200),"Male","11/29/1997",3);
+        Person p4 = new Person("Vishal",new House("75Aplhonsus",new City("Boston"),"MA",021200),"Male","11/29/1997",4);
         addPerson(p1);
         addPerson(p2);
         addPerson(p3);
@@ -48,8 +48,8 @@ public class PersonDirectory {
         communities.add(co1);
         communities.add(co2);
         communities.add(co3);
-        communities.add(co4);*/
-    }
+        communities.add(co4)
+    }*/
     
     public void addPerson(Person person){
         persons.add(person);

@@ -339,7 +339,6 @@ public class CreatePatient extends javax.swing.JPanel {
         DefaultTableModel model = (DefaultTableModel) tablePerson.getModel();
         Person person = personDirectory.getPerson(model.getValueAt(row_selected, 0).toString());
         House house = person.getResidence();
-        Community comm = house.getCommunity();
         City city = house.getCity();
 
         txtName.setText(person.getName());
@@ -350,7 +349,7 @@ public class CreatePatient extends javax.swing.JPanel {
         txtCity.setText(city.getCityName());
         txtState.setText(house.getState());
         txtZip.setText(String.valueOf(house.getPin()));
-        txtCommunity.setText(comm.getCommunity());
+        txtCommunity.setText(house.getCommunity());
     }//GEN-LAST:event_ViewPersonnActionPerformed
 
     private void buttonAddActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonAddActionPerformed
@@ -486,7 +485,7 @@ private void populateTable() {
             data[5] = person.getResidence().getCity().getCityName();
             data[6] = person.getResidence().getState();
             data[7] = person.getResidence().getPin();
-            data[8] = person.getResidence().getCommunity().getCommunity();
+            data[8] = person.getResidence().getCommunity();
             
             model.addRow(data);
             

@@ -19,15 +19,15 @@ public class PatientDirectory {
         patients = new ArrayList<>();
         //addPatient();
     }
-    public void addPatient() {
+    /*public void addPatient() {
         Date resultdate = new Date(System.currentTimeMillis());
-        Patient p1 = new Patient("Raushan",new House("75Aplhonsus",new City("Boston"),"MA",021200,new Community("Roxbury")),"Male","11/29/1997",1,new Encounter(new VitalSigns(10,20,30),resultdate,"Septicemia"),11);
-        Patient p2 = new Patient("Gaurav",new House("75Aplhonsus",new City("Boston"),"MA",021200,new Community("Roxbury")),"Male","11/29/1997",2,new Encounter(new VitalSigns(11,21,31),resultdate,"Diabetes"),12);
-        Patient p3 = new Patient("Rohit",new House("75Aplhonsus",new City("Boston"),"MA",021200,new Community("Roxbury")),"Male","11/29/1997",3,new Encounter(new VitalSigns(12,22,32),resultdate,"Obesity"),13);
+        Patient p1 = new Patient("Raushan",new House("75Aplhonsus",new City("Boston"),"MA",021200,"Parker Street"),"Male","11/29/1997",1,new Encounter(new VitalSigns(10,20,30),resultdate,"Septicemia"),11);
+        Patient p2 = new Patient("Gaurav",new House("75Aplhonsus",new City("Boston"),"MA",021200),"Male","11/29/1997",2,new Encounter(new VitalSigns(11,21,31),resultdate,"Diabetes"),12);
+        Patient p3 = new Patient("Rohit",new House("75Aplhonsus",new City("Boston"),"MA",021200),"Male","11/29/1997",3,new Encounter(new VitalSigns(12,22,32),resultdate,"Obesity"),13);
         addPatients(p1);
         addPatients(p2);
         addPatients(p3);
-    }
+    }*/
 
     public void addPatients(Patient patient) {
         patients.add(patient);

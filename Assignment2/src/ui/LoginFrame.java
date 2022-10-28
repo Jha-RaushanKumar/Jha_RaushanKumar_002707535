@@ -5,8 +5,10 @@
 package ui;
 
 import javax.swing.JOptionPane;
+import model.Community;
 import model.PatientDirectory;
 import model.PersonDirectory;
+import model.Systemm;
 
 /**
  *
@@ -19,6 +21,8 @@ public class LoginFrame extends javax.swing.JFrame {
      */
     PersonDirectory personDirectory;
     PatientDirectory patientDirectory;
+    Community community;
+    Systemm system;
     public LoginFrame() {
         initComponents();
         personDirectory = new PersonDirectory();

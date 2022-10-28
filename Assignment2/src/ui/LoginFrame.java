@@ -56,6 +56,15 @@ public class LoginFrame extends javax.swing.JFrame {
         jLabel2.setForeground(new java.awt.Color(0, 0, 153));
         jLabel2.setText("Password:");
 
+        txtUserName.setText("admin");
+        txtUserName.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtUserNameActionPerformed(evt);
+            }
+        });
+
+        txtPassword.setText("admin");
+
         buttonLogin.setText("Login");
         buttonLogin.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -170,8 +179,8 @@ public class LoginFrame extends javax.swing.JFrame {
                     .addComponent(buttonHospital)
                     .addComponent(buttonCommunity))
                 .addGap(80, 80, 80)
-                .addComponent(buttonLogin)
-                .addContainerGap(282, Short.MAX_VALUE))
+                .addComponent(buttonLogin, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(267, Short.MAX_VALUE))
         );
 
         pack();
@@ -193,6 +202,10 @@ public class LoginFrame extends javax.swing.JFrame {
     private void buttonCommunityActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonCommunityActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_buttonCommunityActionPerformed
+
+    private void txtUserNameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtUserNameActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtUserNameActionPerformed
 
     /**
      * @param args the command line arguments

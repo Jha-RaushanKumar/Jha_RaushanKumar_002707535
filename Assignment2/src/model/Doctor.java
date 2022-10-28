@@ -14,8 +14,8 @@ public class Doctor extends Person{
 
     private int docId;
     
-    public Doctor(String name, int id, House residence, String gender, Date dob, int docId) {
-        super(name, residence, gender, txtDate.getText(), dob);
+    public Doctor(String name, House residence, String gender, String dob, int id, int docId) {
+        super(name, residence, gender, dob, id);
         
         this.docId = docId;
     }

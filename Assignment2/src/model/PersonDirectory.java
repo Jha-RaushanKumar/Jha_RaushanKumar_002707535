@@ -17,7 +17,7 @@ public class PersonDirectory {
 
     public PersonDirectory() {
         persons = new ArrayList<>();
-       addPersons();
+       //addPersons();
     }
     
     public void addPersons() {
@@ -80,6 +80,7 @@ public class PersonDirectory {
         return null;
     }
     
+    
     public void deletePerson(String name){
         
         for (Person emp : persons) {
@@ -88,8 +89,34 @@ public class PersonDirectory {
                 persons.remove(emp);
                 break;
             }
+            else if(emp.getId() == Integer.parseInt(name)){
+                persons.remove(emp);
+                break;
+            }
         }
     }
+    
+    public PersonDirectory idFilter(int eId) {
+
+        PersonDirectory list = new PersonDirectory();
+        for (Person emp : persons) {
+            if (emp.getId() == eId) {
+                list.addPerson(emp);
+            }
+        }
+        return list;
+    }
+    
+    /*public void deletePerson(int id){
+        
+        for (Person emp : persons) {
+ 
+            if (emp.getId() == id) {
+                persons.remove(emp);
+                break;
+            }
+        }
+    }*/
     
     
     

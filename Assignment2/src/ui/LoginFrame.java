@@ -6,6 +6,8 @@ package ui;
 
 import javax.swing.JOptionPane;
 import model.Community;
+import model.DoctorDirectory;
+import model.HospitalDirectory;
 import model.PatientDirectory;
 import model.PersonDirectory;
 import model.Systemm;
@@ -21,11 +23,16 @@ public class LoginFrame extends javax.swing.JFrame {
      */
     PersonDirectory personDirectory;
     PatientDirectory patientDirectory;
+    DoctorDirectory doctorDirectory;
     Community community;
-    Systemm system;
+    HospitalDirectory hospitalDirectory;
     public LoginFrame() {
         initComponents();
         personDirectory = new PersonDirectory();
+        patientDirectory = new PatientDirectory();
+        doctorDirectory = new DoctorDirectory();
+        community = new Community();
+        hospitalDirectory = new HospitalDirectory();
     }
 
     /**
@@ -199,7 +206,7 @@ public class LoginFrame extends javax.swing.JFrame {
         // TODO add your handling code here:
         if(buttonSystem.isSelected() && !buttonPatient.isSelected() && !buttonDOctor.isSelected() && !buttonHospital.isSelected() && !buttonCommunity.isSelected()){
             if( txtUserName.getText().matches("sysadmin") && txtPassword.getText().matches("sysadmin")){
-                SystemPanel patient = new SystemPanel();
+                SystemPanel patient = new SystemPanel(personDirectory,patientDirectory,doctorDirectory,community,hospitalDirectory);
                 patient.setVisible(true);
             }
             else{
@@ -208,7 +215,7 @@ public class LoginFrame extends javax.swing.JFrame {
         }
         else if(!buttonSystem.isSelected() && buttonPatient.isSelected() && !buttonDOctor.isSelected() && !buttonHospital.isSelected() && !buttonCommunity.isSelected()){
             if( txtUserName.getText().matches("patient") && txtPassword.getText().matches("patient")){
-                PatientFrame patient = new PatientFrame();
+                PatientFrame patient = new PatientFrame(personDirectory,patientDirectory,doctorDirectory,community,hospitalDirectory);
                 patient.setVisible(true);
             }
             else{
@@ -217,7 +224,7 @@ public class LoginFrame extends javax.swing.JFrame {
         }
         else if(!buttonSystem.isSelected() && !buttonPatient.isSelected() && buttonDOctor.isSelected() && !buttonHospital.isSelected() && !buttonCommunity.isSelected()){
             if( txtUserName.getText().matches("doctor") && txtPassword.getText().matches("doctor")){
-                DoctorFrame patient = new DoctorFrame();
+                DoctorFrame patient = new DoctorFrame(personDirectory,patientDirectory,doctorDirectory,community,hospitalDirectory);
                 patient.setVisible(true);
             }
             else{
@@ -226,7 +233,7 @@ public class LoginFrame extends javax.swing.JFrame {
         }
         else if(!buttonSystem.isSelected() && !buttonPatient.isSelected() && !buttonDOctor.isSelected() && buttonHospital.isSelected() && !buttonCommunity.isSelected()){
             if( txtUserName.getText().matches("hosadmin") && txtPassword.getText().matches("hosadmin")){
-                HospitalFrame patient = new HospitalFrame();
+                HospitalFrame patient = new HospitalFrame(personDirectory,patientDirectory,doctorDirectory,community,hospitalDirectory);
                 patient.setVisible(true);
             }
             else{
@@ -235,7 +242,7 @@ public class LoginFrame extends javax.swing.JFrame {
         }
         else if(!buttonSystem.isSelected() && !buttonPatient.isSelected() && !buttonDOctor.isSelected() && !buttonHospital.isSelected() && buttonCommunity.isSelected()){
             if( txtUserName.getText().matches("commadmin") && txtPassword.getText().matches("commadmin")){
-                CommFrame patient = new CommFrame();
+                CommFrame patient = new CommFrame(personDirectory,patientDirectory,doctorDirectory,community,hospitalDirectory);
                 patient.setVisible(true);
             }
             else{

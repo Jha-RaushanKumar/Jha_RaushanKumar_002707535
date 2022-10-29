@@ -24,13 +24,17 @@ public class PatientFrame extends javax.swing.JFrame {
     DoctorDirectory doctorDirectory;
     Community community;
     HospitalDirectory hospitalDirectory;
-    public PatientFrame() {
+    public PatientFrame(PersonDirectory personDirectory,
+    PatientDirectory patientDirectory,
+    DoctorDirectory doctorDirectory,
+    Community community,
+    HospitalDirectory hospitalDirectory) {
         initComponents();
-        personDirectory = new PersonDirectory();
-        patientDirectory = new PatientDirectory();
-        doctorDirectory = new DoctorDirectory();
-        community = new Community();
-        hospitalDirectory = new HospitalDirectory();
+        this.personDirectory=personDirectory;
+        this.patientDirectory=patientDirectory;
+        this.doctorDirectory=doctorDirectory;
+        this.community=community;
+        this.hospitalDirectory=hospitalDirectory;
     }
 
     /**
@@ -57,7 +61,7 @@ public class PatientFrame extends javax.swing.JFrame {
 
         jButton2.setFont(new java.awt.Font("Cambria", 0, 14)); // NOI18N
         jButton2.setForeground(new java.awt.Color(0, 0, 153));
-        jButton2.setText("Doctor");
+        jButton2.setText("Search for Doctor");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton2ActionPerformed(evt);
@@ -66,7 +70,7 @@ public class PatientFrame extends javax.swing.JFrame {
 
         jButton6.setFont(new java.awt.Font("Cambria", 0, 14)); // NOI18N
         jButton6.setForeground(new java.awt.Color(0, 0, 153));
-        jButton6.setText("Existing Patient");
+        jButton6.setText("See Your Details!");
         jButton6.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton6ActionPerformed(evt);
@@ -84,7 +88,7 @@ public class PatientFrame extends javax.swing.JFrame {
 
         jButton3.setFont(new java.awt.Font("Cambria", 0, 14)); // NOI18N
         jButton3.setForeground(new java.awt.Color(0, 0, 153));
-        jButton3.setText("Hospital");
+        jButton3.setText("Search for Hospital");
         jButton3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton3ActionPerformed(evt);
@@ -182,8 +186,13 @@ public class PatientFrame extends javax.swing.JFrame {
     private void buttonReturnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonReturnActionPerformed
         // TODO add your handling code here:
         //system.setListPatient(patientDirectory);
-        LoginFrame loginFrame = new LoginFrame();
-        loginFrame.setVisible(true);
+        /*LoginFramee loginFrame = new LoginFramee(personDirectory,
+     patientDirectory,
+     doctorDirectory,
+     community,
+     hospitalDirectory);
+        loginFrame.setVisible(true);*/
+        this.setVisible(false);
     }//GEN-LAST:event_buttonReturnActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
@@ -222,7 +231,7 @@ public class PatientFrame extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new PatientFrame().setVisible(true);
+                //new PatientFrame().setVisible(true);
             }
         });
     }

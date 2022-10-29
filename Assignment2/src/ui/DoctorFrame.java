@@ -24,13 +24,17 @@ public class DoctorFrame extends javax.swing.JFrame {
     DoctorDirectory doctorDirectory;
     Community community;
     HospitalDirectory hospitalDirectory;
-    public DoctorFrame() {
+    public DoctorFrame(PersonDirectory personDirectory,
+    PatientDirectory patientDirectory,
+    DoctorDirectory doctorDirectory,
+    Community community,
+    HospitalDirectory hospitalDirectory) {
         initComponents();
-        personDirectory = new PersonDirectory();
-        patientDirectory = new PatientDirectory();
-        doctorDirectory = new DoctorDirectory();
-        community = new Community();
-        hospitalDirectory = new HospitalDirectory();
+        this.personDirectory=personDirectory;
+        this.patientDirectory=patientDirectory;
+        this.doctorDirectory=doctorDirectory;
+        this.community=community;
+        this.hospitalDirectory=hospitalDirectory;
     }
 
     /**
@@ -66,7 +70,7 @@ public class DoctorFrame extends javax.swing.JFrame {
 
         jButton6.setFont(new java.awt.Font("Cambria", 0, 14)); // NOI18N
         jButton6.setForeground(new java.awt.Color(0, 0, 153));
-        jButton6.setText("Existing Patient");
+        jButton6.setText("Add Vital Signs");
         jButton6.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton6ActionPerformed(evt);
@@ -84,7 +88,7 @@ public class DoctorFrame extends javax.swing.JFrame {
 
         jButton2.setFont(new java.awt.Font("Cambria", 0, 14)); // NOI18N
         jButton2.setForeground(new java.awt.Color(0, 0, 153));
-        jButton2.setText("Doctor");
+        jButton2.setText("See Your Details!");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton2ActionPerformed(evt);
@@ -95,17 +99,16 @@ public class DoctorFrame extends javax.swing.JFrame {
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(buttonReturn, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(0, 5, Short.MAX_VALUE)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                            .addComponent(jButton1, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 153, Short.MAX_VALUE)
-                            .addComponent(jButton6, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
-                    .addComponent(jButton2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addContainerGap())
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jButton2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jButton1, javax.swing.GroupLayout.DEFAULT_SIZE, 158, Short.MAX_VALUE)
+                            .addComponent(jButton6, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addContainerGap())
+                    .addComponent(buttonReturn, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -183,8 +186,13 @@ public class DoctorFrame extends javax.swing.JFrame {
     private void buttonReturnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonReturnActionPerformed
         // TODO add your handling code here:
         //system.setListPatient(patientDirectory);
-        LoginFrame loginFrame = new LoginFrame();
-        loginFrame.setVisible(true);
+        /*LoginFramee loginFrame = new LoginFramee(personDirectory,
+     patientDirectory,
+     doctorDirectory,
+     community,
+     hospitalDirectory);
+        loginFrame.setVisible(true);*/
+        this.setVisible(false);
 
     }//GEN-LAST:event_buttonReturnActionPerformed
 
@@ -224,7 +232,7 @@ public class DoctorFrame extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new DoctorFrame().setVisible(true);
+                //new DoctorFrame().setVisible(true);
             }
         });
     }

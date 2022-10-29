@@ -5,6 +5,10 @@
 package ui;
 
 import model.Community;
+import model.DoctorDirectory;
+import model.HospitalDirectory;
+import model.PatientDirectory;
+import model.PersonDirectory;
 
 /**
  *
@@ -15,10 +19,22 @@ public class CommFrame extends javax.swing.JFrame {
     /**
      * Creates new form CommFrame
      */
+    PersonDirectory personDirectory;
+    PatientDirectory patientDirectory;
+    DoctorDirectory doctorDirectory;
     Community community;
-    public CommFrame() {
+    HospitalDirectory hospitalDirectory;
+    public CommFrame(PersonDirectory personDirectory,
+    PatientDirectory patientDirectory,
+    DoctorDirectory doctorDirectory,
+    Community community,
+    HospitalDirectory hospitalDirectory) {
         initComponents();
-        community = new Community();
+        this.personDirectory=personDirectory;
+        this.patientDirectory=patientDirectory;
+        this.doctorDirectory=doctorDirectory;
+        this.community=community;
+        this.hospitalDirectory=hospitalDirectory;
     }
 
     /**
@@ -327,8 +343,13 @@ public class CommFrame extends javax.swing.JFrame {
     private void buttonReturn1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonReturn1ActionPerformed
         // TODO add your handling code here:
         //system.setListPatient(patientDirectory);
-        LoginFrame loginFrame = new LoginFrame();
-        loginFrame.setVisible(true);
+        /*LoginFramee loginFrame = new LoginFramee(personDirectory,
+     patientDirectory,
+     doctorDirectory,
+     community,
+     hospitalDirectory);
+        loginFrame.setVisible(true);*/
+        this.setVisible(false);
 
     }//GEN-LAST:event_buttonReturn1ActionPerformed
 
@@ -362,7 +383,7 @@ public class CommFrame extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new CommFrame().setVisible(true);
+                //new CommFrame().setVisible(true);
             }
         });
     }

@@ -76,23 +76,23 @@ public class LoginFrame extends javax.swing.JFrame {
             }
         });
 
-        buttonSystem.setFont(new java.awt.Font("Bookman Old Style", 2, 14)); // NOI18N
+        buttonSystem.setFont(new java.awt.Font("Bookman Old Style", 0, 14)); // NOI18N
         buttonSystem.setForeground(new java.awt.Color(255, 51, 51));
         buttonSystem.setText("System");
 
-        buttonPatient.setFont(new java.awt.Font("Bookman Old Style", 2, 14)); // NOI18N
+        buttonPatient.setFont(new java.awt.Font("Bookman Old Style", 0, 14)); // NOI18N
         buttonPatient.setForeground(new java.awt.Color(255, 51, 51));
         buttonPatient.setText("Patient");
 
-        buttonDOctor.setFont(new java.awt.Font("Bookman Old Style", 2, 14)); // NOI18N
+        buttonDOctor.setFont(new java.awt.Font("Bookman Old Style", 0, 14)); // NOI18N
         buttonDOctor.setForeground(new java.awt.Color(255, 51, 51));
         buttonDOctor.setText("Doctor");
 
-        buttonHospital.setFont(new java.awt.Font("Baskerville Old Face", 2, 14)); // NOI18N
+        buttonHospital.setFont(new java.awt.Font("Bookman Old Style", 0, 14)); // NOI18N
         buttonHospital.setForeground(new java.awt.Color(255, 51, 51));
         buttonHospital.setText("Hospital");
 
-        buttonCommunity.setFont(new java.awt.Font("Baskerville Old Face", 2, 14)); // NOI18N
+        buttonCommunity.setFont(new java.awt.Font("Bookman Old Style", 0, 14)); // NOI18N
         buttonCommunity.setForeground(new java.awt.Color(255, 51, 51));
         buttonCommunity.setText("Community");
         buttonCommunity.addActionListener(new java.awt.event.ActionListener() {
@@ -148,7 +148,7 @@ public class LoginFrame extends javax.swing.JFrame {
                                 .addGap(18, 18, 18)
                                 .addComponent(buttonHospital, javax.swing.GroupLayout.PREFERRED_SIZE, 127, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(18, 18, 18)
-                                .addComponent(buttonCommunity, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addComponent(buttonCommunity, javax.swing.GroupLayout.PREFERRED_SIZE, 134, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addComponent(buttonLogin))))
                 .addContainerGap(26, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
@@ -177,14 +177,14 @@ public class LoginFrame extends javax.swing.JFrame {
                     .addComponent(txtPassword, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(54, 54, 54)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(buttonSystem)
-                    .addComponent(buttonPatient)
-                    .addComponent(buttonDOctor)
-                    .addComponent(buttonHospital)
-                    .addComponent(buttonCommunity))
+                    .addComponent(buttonSystem, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(buttonPatient, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(buttonDOctor, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(buttonHospital, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(buttonCommunity, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(80, 80, 80)
                 .addComponent(buttonLogin, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(267, Short.MAX_VALUE))
+                .addContainerGap(250, Short.MAX_VALUE))
         );
 
         pack();
@@ -201,9 +201,36 @@ public class LoginFrame extends javax.swing.JFrame {
                 JOptionPane.showMessageDialog(this, "Incorrect credential");
             }        
         }
+        else if(!buttonSystem.isSelected() && buttonPatient.isSelected() && !buttonDOctor.isSelected() && !buttonHospital.isSelected() && !buttonCommunity.isSelected()){
+            if( txtUserName.getText().matches("patient") && txtPassword.getText().matches("patient")){
+                SystemPanel patient = new SystemPanel();
+                patient.setVisible(true);
+            }
+            else{
+                JOptionPane.showMessageDialog(this, "Incorrect credential");
+            }        
+        }
+        else if(!buttonSystem.isSelected() && !buttonPatient.isSelected() && buttonDOctor.isSelected() && !buttonHospital.isSelected() && !buttonCommunity.isSelected()){
+            if( txtUserName.getText().matches("doctor") && txtPassword.getText().matches("doctor")){
+                SystemPanel patient = new SystemPanel();
+                patient.setVisible(true);
+            }
+            else{
+                JOptionPane.showMessageDialog(this, "Incorrect credential");
+            }        
+        }
         else if(!buttonSystem.isSelected() && !buttonPatient.isSelected() && !buttonDOctor.isSelected() && buttonHospital.isSelected() && !buttonCommunity.isSelected()){
             if( txtUserName.getText().matches("hosadmin") && txtPassword.getText().matches("hosadmin")){
-                SystemPanel patient = new SystemPanel();
+                HospitalFrame patient = new HospitalFrame();
+                patient.setVisible(true);
+            }
+            else{
+                JOptionPane.showMessageDialog(this, "Incorrect credential");
+            }        
+        }
+        else if(!buttonSystem.isSelected() && !buttonPatient.isSelected() && !buttonDOctor.isSelected() && !buttonHospital.isSelected() && buttonCommunity.isSelected()){
+            if( txtUserName.getText().matches("commadmin") && txtPassword.getText().matches("commadmin")){
+                CommFrame patient = new CommFrame();
                 patient.setVisible(true);
             }
             else{

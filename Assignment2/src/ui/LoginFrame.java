@@ -83,6 +83,11 @@ public class LoginFrame extends javax.swing.JFrame {
         buttonPatient.setFont(new java.awt.Font("Bookman Old Style", 0, 14)); // NOI18N
         buttonPatient.setForeground(new java.awt.Color(255, 51, 51));
         buttonPatient.setText("Patient");
+        buttonPatient.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                buttonPatientActionPerformed(evt);
+            }
+        });
 
         buttonDOctor.setFont(new java.awt.Font("Bookman Old Style", 0, 14)); // NOI18N
         buttonDOctor.setForeground(new java.awt.Color(255, 51, 51));
@@ -203,7 +208,7 @@ public class LoginFrame extends javax.swing.JFrame {
         }
         else if(!buttonSystem.isSelected() && buttonPatient.isSelected() && !buttonDOctor.isSelected() && !buttonHospital.isSelected() && !buttonCommunity.isSelected()){
             if( txtUserName.getText().matches("patient") && txtPassword.getText().matches("patient")){
-                SystemPanel patient = new SystemPanel();
+                PatientFrame patient = new PatientFrame();
                 patient.setVisible(true);
             }
             else{
@@ -212,7 +217,7 @@ public class LoginFrame extends javax.swing.JFrame {
         }
         else if(!buttonSystem.isSelected() && !buttonPatient.isSelected() && buttonDOctor.isSelected() && !buttonHospital.isSelected() && !buttonCommunity.isSelected()){
             if( txtUserName.getText().matches("doctor") && txtPassword.getText().matches("doctor")){
-                SystemPanel patient = new SystemPanel();
+                DoctorFrame patient = new DoctorFrame();
                 patient.setVisible(true);
             }
             else{
@@ -250,6 +255,10 @@ public class LoginFrame extends javax.swing.JFrame {
     private void txtUserNameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtUserNameActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_txtUserNameActionPerformed
+
+    private void buttonPatientActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonPatientActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_buttonPatientActionPerformed
 
     /**
      * @param args the command line arguments

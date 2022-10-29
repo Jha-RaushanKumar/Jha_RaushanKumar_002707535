@@ -17,10 +17,10 @@ Hospital p1 = new Hospital("Hospital1","ParkerStreet");
         Hospital p2 = new Hospital("Hospital2","Roxbury");
         Hospital p3 = new Hospital("Hospital3","Northeastern");
         Hospital p4 = new Hospital("Hospital4","Downtown");
-        Hospital p5 = new Hospital("Hospital5","ParkerStreet");
-        Hospital p6 = new Hospital("Hospital6","Roxbury");
-        Hospital p7 = new Hospital("Hospital7","Northeastern");
-        Hospital p8 = new Hospital("Hospital18","Downtown");
+        Hospital p5 = new Hospital("Hospital5","ParkerStreett");
+        Hospital p6 = new Hospital("Hospital6","Roxburyy");
+        Hospital p7 = new Hospital("Hospital7","Northeasternn");
+        Hospital p8 = new Hospital("Hospital18","Downtownn");
         
     public HospitalDirectory() {
         hospitals = new ArrayList<>();

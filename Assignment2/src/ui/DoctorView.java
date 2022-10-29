@@ -557,7 +557,7 @@ public class DoctorView extends javax.swing.JPanel {
 
     private void buttonAdd1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonAdd1ActionPerformed
         // TODO add your handling code here:
-        int row_selected = tablePerson.getSelectedRow();
+        int row_selected = tableDoctor.getSelectedRow();
 
         if (row_selected < 0) {
             JOptionPane.showMessageDialog(this, "Please Select a row to update details.");
@@ -569,6 +569,7 @@ public class DoctorView extends javax.swing.JPanel {
             selected_row[i] = model.getValueAt(row_selected, i);
 
         }
+        doctorDirectory.deleteDoctor(model.getValueAt(row_selected, 9).toString());
 
         selected_row[0] = txtName.getText();
         selected_row[1] = txtGender.getText();

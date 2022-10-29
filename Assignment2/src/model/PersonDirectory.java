@@ -17,18 +17,26 @@ public class PersonDirectory {
 
     public PersonDirectory() {
         persons = new ArrayList<>();
-       //addPersons();
+       addPersons();
     }
     
-    /*public void addPersons() {
-        Person p1 = new Person("Raushan",new House("75Aplhonsus",new City("Boston"),"MA",021200),"Male","11/29/1997",1);
-        Person p2 = new Person("Gaurav",new House("75Aplhonsus",new City("Boston"),"MA",021200),"Male","11/29/1997",2);
-        Person p3 = new Person("Rohit",new House("75Aplhonsus",new City("Boston"),"MA",021200),"Male","11/29/1997",3);
-        Person p4 = new Person("Vishal",new House("75Aplhonsus",new City("Boston"),"MA",021200),"Male","11/29/1997",4);
+    public void addPersons() {
+        Person p1 = new Person("Raushan",new House("75Aplhonsus",new City("Boston"),"MA",021200,"ParkerStreet"),"Male","11/29/1997",1);
+        Person p2 = new Person("Gaurav",new House("75Aplhosus",new City("Boston"),"MA",021200,"Roxbury"),"Male","11/29/1997",2);
+        Person p3 = new Person("Rohit",new House("75Aplhous",new City("Boston"),"MA",021200,"Northeastern"),"Male","11/29/1997",3);
+        Person p4 = new Person("Vishal",new House("75Aplhosus",new City("Boston"),"MA",021200,"Downtown"),"Male","11/29/1997",4);
+        Person p5 = new Person("Rishabh",new House("75Aplhonsus",new City("Boston"),"MA",021200,"ParkerStreet"),"Male","11/29/1997",5);
+        Person p6 = new Person("Himanshu",new House("75Apnsus",new City("Boston"),"MA",021200,"Roxbury"),"Male","11/29/1997",6);
+        Person p7 = new Person("Harshit",new House("75Aplonsus",new City("Boston"),"MA",021200,"Northeastern"),"Male","11/29/1997",7);
+        Person p8 = new Person("Jyoti",new House("75honsus",new City("Boston"),"MA",021200,"Downtown"),"Male","11/29/1997",8);
         addPerson(p1);
         addPerson(p2);
         addPerson(p3);
         addPerson(p4);
+        addPerson(p5);
+        addPerson(p6);
+        addPerson(p7);
+        addPerson(p8);
 
         /*City c1 = new City("Boston", "MA", "USA");
         City c2 = new City("New York", "NY", "USA");
@@ -48,8 +56,8 @@ public class PersonDirectory {
         communities.add(co1);
         communities.add(co2);
         communities.add(co3);
-        communities.add(co4)
-    }*/
+        communities.add(co4)*/
+    }
     
     public void addPerson(Person person){
         persons.add(person);

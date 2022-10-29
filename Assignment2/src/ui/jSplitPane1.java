@@ -9,5 +9,13 @@ package ui;
  * @author Raushan
  */
 class jSplitPane1 {
+
+    static void setRightComponent(ViewPerson viewPanel) {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
+
+    static void setRightComponent(CreatePersonn createPanel) {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
     
 }

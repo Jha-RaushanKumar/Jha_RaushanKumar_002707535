@@ -250,6 +250,7 @@ public class SystemPanel extends javax.swing.JFrame {
 
     private void buttonReturnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonReturnActionPerformed
         // TODO add your handling code here:
+        //system.setListPatient(patientDirectory);
         LoginFrame loginFrame = new LoginFrame();
         loginFrame.setVisible(true);
         

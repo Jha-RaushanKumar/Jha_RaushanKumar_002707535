@@ -18,9 +18,9 @@ public class PatientDirectory {
         Patient p1 = new Patient("Raushan",new House("75Aplhonsus",new City("Boston"),"MA",021200,"Parker Street"),"Male","11/29/1997",1,new Encounter(new VitalSigns(10,20,30),resultdate,"Septicemia"),11);
         Patient p2 = new Patient("Gaurav",new House("75Aplhonsus",new City("Boston"),"MA",021200,"Roxbury"),"Male","11/29/1997",2,new Encounter(new VitalSigns(11,21,31),resultdate,"Diabetes"),12);
         Patient p3 = new Patient("Rohit",new House("75Aplhonsus",new City("Boston"),"MA",021200,"Northeastern"),"Male","11/29/1997",3,new Encounter(new VitalSigns(12,22,32),resultdate,"Obesity"),13);
-        Patient p4 = new Patient("Rishabh",new House("75Aplhonsus",new City("Boston"),"MA",021200,"Parker Street"),"Male","11/29/1997",4,new Encounter(new VitalSigns(10,20,30),resultdate,"Septicemia"),14);
-        Patient p5 = new Patient("Jyoti",new House("75Aplhonsus",new City("Boston"),"MA",021200,"Roxbury"),"Male","11/29/1997",5,new Encounter(new VitalSigns(15,21,31),resultdate,"Diabetes"),15);
-        Patient p6 = new Patient("Harshit",new House("75Aplhonsus",new City("Boston"),"MA",021200,"Northeastern"),"Male","11/29/1997",6,new Encounter(new VitalSigns(17,22,32),resultdate,"Obesity"),16);
+        Patient p4 = new Patient("Rishabh",new House("75Aplhonsus",new City("Boston"),"MA",021200,"Parker Street"),"Male","11/29/1997",4,new Encounter(new VitalSigns(0,0,0),resultdate,null),14);
+        Patient p5 = new Patient("Jyoti",new House("75Aplhonsus",new City("Boston"),"MA",021200,"Roxbury"),"Male","11/29/1997",5,new Encounter(new VitalSigns(0,0,0),resultdate,null),15);
+        Patient p6 = new Patient("Harshit",new House("75Aplhonsus",new City("Boston"),"MA",021200,"Northeastern"),"Male","11/29/1997",6,new Encounter(new VitalSigns(0,0,0),resultdate,null),16);
         
     public PatientDirectory() {
         patients = new ArrayList<>();

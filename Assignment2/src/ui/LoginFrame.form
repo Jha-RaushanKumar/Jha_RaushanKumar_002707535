@@ -41,7 +41,7 @@
                               <EmptySpace type="separate" max="-2" attributes="0"/>
                               <Component id="buttonHospital" min="-2" pref="127" max="-2" attributes="0"/>
                               <EmptySpace type="separate" max="-2" attributes="0"/>
-                              <Component id="buttonCommunity" min="-2" pref="98" max="-2" attributes="0"/>
+                              <Component id="buttonCommunity" min="-2" pref="134" max="-2" attributes="0"/>
                           </Group>
                           <Component id="buttonLogin" alignment="0" min="-2" max="-2" attributes="0"/>
                       </Group>
@@ -81,15 +81,15 @@
               </Group>
               <EmptySpace min="-2" pref="54" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="buttonSystem" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="buttonPatient" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="buttonDOctor" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="buttonHospital" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="buttonCommunity" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="buttonSystem" alignment="3" min="-2" pref="39" max="-2" attributes="0"/>
+                  <Component id="buttonPatient" alignment="3" min="-2" pref="39" max="-2" attributes="0"/>
+                  <Component id="buttonDOctor" alignment="3" min="-2" pref="38" max="-2" attributes="0"/>
+                  <Component id="buttonHospital" alignment="3" min="-2" pref="36" max="-2" attributes="0"/>
+                  <Component id="buttonCommunity" alignment="3" min="-2" pref="39" max="-2" attributes="0"/>
               </Group>
               <EmptySpace min="-2" pref="80" max="-2" attributes="0"/>
               <Component id="buttonLogin" min="-2" pref="37" max="-2" attributes="0"/>
-              <EmptySpace pref="267" max="32767" attributes="0"/>
+              <EmptySpace pref="250" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -141,7 +141,7 @@
     <Component class="javax.swing.JRadioButton" name="buttonSystem">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-          <Font name="Bookman Old Style" size="14" style="2"/>
+          <Font name="Bookman Old Style" size="14" style="0"/>
         </Property>
         <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
           <Color blue="33" green="33" red="ff" type="rgb"/>
@@ -152,7 +152,7 @@
     <Component class="javax.swing.JRadioButton" name="buttonPatient">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-          <Font name="Bookman Old Style" size="14" style="2"/>
+          <Font name="Bookman Old Style" size="14" style="0"/>
         </Property>
         <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
           <Color blue="33" green="33" red="ff" type="rgb"/>
@@ -163,7 +163,7 @@
     <Component class="javax.swing.JRadioButton" name="buttonDOctor">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-          <Font name="Bookman Old Style" size="14" style="2"/>
+          <Font name="Bookman Old Style" size="14" style="0"/>
         </Property>
         <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
           <Color blue="33" green="33" red="ff" type="rgb"/>
@@ -174,7 +174,7 @@
     <Component class="javax.swing.JRadioButton" name="buttonHospital">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-          <Font name="Baskerville Old Face" size="14" style="2"/>
+          <Font name="Bookman Old Style" size="14" style="0"/>
         </Property>
         <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
           <Color blue="33" green="33" red="ff" type="rgb"/>
@@ -185,7 +185,7 @@
     <Component class="javax.swing.JRadioButton" name="buttonCommunity">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-          <Font name="Baskerville Old Face" size="14" style="2"/>
+          <Font name="Bookman Old Style" size="14" style="0"/>
         </Property>
         <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
           <Color blue="33" green="33" red="ff" type="rgb"/>

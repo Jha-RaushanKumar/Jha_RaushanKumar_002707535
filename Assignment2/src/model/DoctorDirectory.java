@@ -13,9 +13,29 @@ import java.util.ArrayList;
 public class DoctorDirectory {
     
     private ArrayList<Doctor> doctors;
-
+        Doctor p1 = new Doctor("Raushan",new House("75Aplhonsus",new City("Boston"),"MA",021200,"ParkerStreet"),"Male","11/29/1997",1,102);
+        Doctor p2 = new Doctor("Gaurav",new House("75Aplhosus",new City("Boston"),"MA",021200,"Roxbury"),"Male","11/29/1997",2,102);
+        Doctor p3 = new Doctor("Rohit",new House("75Aplhous",new City("Boston"),"MA",021200,"Northeastern"),"Male","11/29/1997",3,103);
+        Doctor p4 = new Doctor("Vishal",new House("75Aplhosus",new City("Boston"),"MA",021200,"Downtown"),"Male","11/29/1997",4,104);
+        Doctor p5 = new Doctor("Rishabh",new House("75Aplhonsus",new City("Boston"),"MA",021200,"ParkerStreet"),"Male","11/29/1997",5,105);
+        Doctor p6 = new Doctor("Himanshu",new House("75Apnsus",new City("Boston"),"MA",021200,"Roxbury"),"Male","11/29/1997",6,106);
+        Doctor p7 = new Doctor("Harshit",new House("75Aplonsus",new City("Boston"),"MA",021200,"Northeastern"),"Male","11/29/1997",7,107);
+        Doctor p8 = new Doctor("Jyotii",new House("75honsus",new City("Boston"),"MA",021200,"Downtown"),"Male","11/29/1997",8,108);
+        
     public DoctorDirectory() {
         doctors = new ArrayList<>();
+        addDoctors();
+    }
+    
+    public void addDoctors(){
+        addDoctor(p1);
+        addDoctor(p2);
+        addDoctor(p3);
+        addDoctor(p4);
+        addDoctor(p5);
+        addDoctor(p6);
+        addDoctor(p7);
+        addDoctor(p8);
     }
 
     public void addDoctor(Doctor doctor){
@@ -69,7 +89,25 @@ public class DoctorDirectory {
                 list.addDoctor(emp);
             }
         }
+        list.remove(p1);
+        list.remove(p2);
+        list.remove(p3);
+        list.remove(p4);
+        list.remove(p5);
+        list.remove(p6);
+        list.remove(p7);
+        list.remove(p8);
         return list;
+    }
+    
+    private void remove(Doctor p1) {
+        for (Doctor emp : doctors) {
+ 
+            if (emp.getDocId() == p1.getDocId()) {
+                doctors.remove(emp);
+                break;
+            }
+        }
     }
     
     

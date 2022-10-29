@@ -361,7 +361,7 @@ public class ViewPerson extends javax.swing.JPanel {
 
         }
         
-        personDirectory.deletePerson(model.getValueAt(row_selected, 0).toString());
+        personDirectory.deletePerson(model.getValueAt(row_selected, 3).toString());
         selected_row[0] = txtName.getText();
         selected_row[1] = txtGender.getText();
         selected_row[2] = txtDate.getText();

@@ -24,6 +24,7 @@ public class HospitalView extends javax.swing.JPanel {
     public HospitalView(HospitalDirectory hospitalDirectory) {
         initComponents();
         this.hospitalDirectory = hospitalDirectory;
+        populateTable();
     }
 
     /**

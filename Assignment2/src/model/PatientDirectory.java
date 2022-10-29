@@ -14,19 +14,19 @@ import java.util.Date;
 public class PatientDirectory {
     
     private ArrayList<Patient> patients;
-    
-    public PatientDirectory() {
-        patients = new ArrayList<>();
-        addPatient();
-    }
-    public void addPatient() {
-        Date resultdate = new Date(System.currentTimeMillis());
+    Date resultdate = new Date(System.currentTimeMillis());
         Patient p1 = new Patient("Raushan",new House("75Aplhonsus",new City("Boston"),"MA",021200,"Parker Street"),"Male","11/29/1997",1,new Encounter(new VitalSigns(10,20,30),resultdate,"Septicemia"),11);
         Patient p2 = new Patient("Gaurav",new House("75Aplhonsus",new City("Boston"),"MA",021200,"Roxbury"),"Male","11/29/1997",2,new Encounter(new VitalSigns(11,21,31),resultdate,"Diabetes"),12);
         Patient p3 = new Patient("Rohit",new House("75Aplhonsus",new City("Boston"),"MA",021200,"Northeastern"),"Male","11/29/1997",3,new Encounter(new VitalSigns(12,22,32),resultdate,"Obesity"),13);
         Patient p4 = new Patient("Rishabh",new House("75Aplhonsus",new City("Boston"),"MA",021200,"Parker Street"),"Male","11/29/1997",4,new Encounter(new VitalSigns(10,20,30),resultdate,"Septicemia"),14);
         Patient p5 = new Patient("Jyoti",new House("75Aplhonsus",new City("Boston"),"MA",021200,"Roxbury"),"Male","11/29/1997",5,new Encounter(new VitalSigns(15,21,31),resultdate,"Diabetes"),15);
         Patient p6 = new Patient("Harshit",new House("75Aplhonsus",new City("Boston"),"MA",021200,"Northeastern"),"Male","11/29/1997",6,new Encounter(new VitalSigns(17,22,32),resultdate,"Obesity"),16);
+        
+    public PatientDirectory() {
+        patients = new ArrayList<>();
+        addPatient();
+    }
+    public void addPatient() {
         addPatients(p1);
         addPatients(p2);
         addPatients(p3);
@@ -86,11 +86,24 @@ public class PatientDirectory {
             if (emp.getPatientId() == eId) {
                 list.addPatients(emp);
             }
-            list.getPatients().remove(0);
-            list.getPatients().remove(1);
-            list.getPatients().remove(2);
         }
+        list.remove(p1);
+        list.remove(p2);
+        list.remove(p3);
+        list.remove(p4);
+        list.remove(p5);
+        list.remove(p6);
         return list;
+    }
+    
+    private void remove(Patient p1) {
+        for (Patient emp : patients) {
+ 
+            if (emp.getPatientId() == p1.getPatientId()) {
+                patients.remove(emp);
+                break;
+            }
+        }
     }
     
     

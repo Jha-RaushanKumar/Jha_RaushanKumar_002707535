@@ -14,14 +14,7 @@ import java.util.Date;
 public class PersonDirectory {
     
     private ArrayList<Person> persons;
-
-    public PersonDirectory() {
-        persons = new ArrayList<>();
-       addPersons();
-    }
-    
-    public void addPersons() {
-        Person p1 = new Person("Raushan",new House("75Aplhonsus",new City("Boston"),"MA",021200,"ParkerStreet"),"Male","11/29/1997",1);
+Person p1 = new Person("Raushan",new House("75Aplhonsus",new City("Boston"),"MA",021200,"ParkerStreet"),"Male","11/29/1997",1);
         Person p2 = new Person("Gaurav",new House("75Aplhosus",new City("Boston"),"MA",021200,"Roxbury"),"Male","11/29/1997",2);
         Person p3 = new Person("Rohit",new House("75Aplhous",new City("Boston"),"MA",021200,"Northeastern"),"Male","11/29/1997",3);
         Person p4 = new Person("Vishal",new House("75Aplhosus",new City("Boston"),"MA",021200,"Downtown"),"Male","11/29/1997",4);
@@ -29,6 +22,13 @@ public class PersonDirectory {
         Person p6 = new Person("Himanshu",new House("75Apnsus",new City("Boston"),"MA",021200,"Roxbury"),"Male","11/29/1997",6);
         Person p7 = new Person("Harshit",new House("75Aplonsus",new City("Boston"),"MA",021200,"Northeastern"),"Male","11/29/1997",7);
         Person p8 = new Person("Jyoti",new House("75honsus",new City("Boston"),"MA",021200,"Downtown"),"Male","11/29/1997",8);
+        
+    public PersonDirectory() {
+        persons = new ArrayList<>();
+       addPersons();
+    }
+    
+    public void addPersons() {
         addPerson(p1);
         addPerson(p2);
         addPerson(p3);
@@ -112,7 +112,24 @@ public class PersonDirectory {
                 list.addPerson(emp);
             }
         }
+        list.remove(p1);
+        list.remove(p2);
+        list.remove(p3);
+        list.remove(p4);
+        list.remove(p5);
+        list.remove(p6);
+        list.remove(p7);list.remove(p8);
+        
         return list;
+    }
+    private void remove(Person p1) {
+        for (Person emp : persons) {
+ 
+            if (emp.getId() == p1.getId()) {
+                persons.remove(emp);
+                break;
+            }
+        }
     }
     
     /*public void deletePerson(int id){

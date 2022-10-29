@@ -192,14 +192,27 @@ public class LoginFrame extends javax.swing.JFrame {
 
     private void buttonLoginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonLoginActionPerformed
         // TODO add your handling code here:
-        if( txtUserName.getText().matches("admin") && txtPassword.getText().matches("admin")){
-            if(buttonSystem.isSelected()){
+        if(buttonSystem.isSelected() && !buttonPatient.isSelected() && !buttonDOctor.isSelected() && !buttonHospital.isSelected() && !buttonCommunity.isSelected()){
+            if( txtUserName.getText().matches("sysadmin") && txtPassword.getText().matches("sysadmin")){
                 SystemPanel patient = new SystemPanel();
                 patient.setVisible(true);
             }
-            
-        }else{
-            JOptionPane.showMessageDialog(this, "Incorrect credential");
+            else{
+                JOptionPane.showMessageDialog(this, "Incorrect credential");
+            }        
+        }
+        else if(!buttonSystem.isSelected() && !buttonPatient.isSelected() && !buttonDOctor.isSelected() && buttonHospital.isSelected() && !buttonCommunity.isSelected()){
+            if( txtUserName.getText().matches("hosadmin") && txtPassword.getText().matches("hosadmin")){
+                SystemPanel patient = new SystemPanel();
+                patient.setVisible(true);
+            }
+            else{
+                JOptionPane.showMessageDialog(this, "Incorrect credential");
+            }        
+        }
+        
+        else{
+                JOptionPane.showMessageDialog(this, "Please select one Role ");
         }
     }//GEN-LAST:event_buttonLoginActionPerformed
 

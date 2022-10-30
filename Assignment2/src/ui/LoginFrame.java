@@ -67,14 +67,11 @@ public class LoginFrame extends javax.swing.JFrame {
         jLabel2.setForeground(new java.awt.Color(0, 0, 153));
         jLabel2.setText("Password:");
 
-        txtUserName.setText("admin");
         txtUserName.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtUserNameActionPerformed(evt);
             }
         });
-
-        txtPassword.setText("admin");
 
         buttonLogin.setText("Login");
         buttonLogin.addActionListener(new java.awt.event.ActionListener() {

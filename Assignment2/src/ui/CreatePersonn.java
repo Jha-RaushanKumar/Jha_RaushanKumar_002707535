@@ -125,7 +125,11 @@ public class CreatePersonn extends javax.swing.JPanel {
         jLabel10.setForeground(new java.awt.Color(0, 0, 153));
         jLabel10.setText("Community:");
 
-        txtCommunity.setText("Northeastern");
+        txtName.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtNameActionPerformed(evt);
+            }
+        });
 
         buttonSave.setText("Save Person");
         buttonSave.addActionListener(new java.awt.event.ActionListener() {
@@ -234,7 +238,7 @@ public class CreatePersonn extends javax.swing.JPanel {
 public boolean validateData() {
 
         if (txtName.getText().length() <= 0 || (!txtName.getText().matches("[A-Za-z]+"))) {
-            JOptionPane.showMessageDialog(this, "Please Enter Name");
+            JOptionPane.showMessageDialog(this, "Please Enter Valid Name");
             return false;
         }
 
@@ -315,6 +319,10 @@ public boolean validateData() {
             txtCommunity.setText("");
         }
     }//GEN-LAST:event_buttonSaveActionPerformed
+
+    private void txtNameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtNameActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtNameActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

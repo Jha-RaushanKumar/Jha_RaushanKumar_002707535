@@ -493,7 +493,6 @@ public class ViewPatientByDoctor extends javax.swing.JPanel {
             Integer.parseInt(selected_row[3].toString()),encounter,Integer.parseInt(selected_row[9].toString()));
         JOptionPane.showMessageDialog(this, "Patient Updated for selected record successfully");
         populateTable();
-        encounterHistory.addEncounter(encounter);
 
         /*int row_selected = tablePerson.getSelectedRow();
 

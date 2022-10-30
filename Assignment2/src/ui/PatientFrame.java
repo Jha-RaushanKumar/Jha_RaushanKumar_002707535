@@ -59,6 +59,8 @@ public class PatientFrame extends javax.swing.JFrame {
 
         jSplitPane1.setDividerLocation(170);
 
+        jPanel1.setBackground(new java.awt.Color(0, 102, 255));
+
         jButton2.setFont(new java.awt.Font("Cambria", 0, 14)); // NOI18N
         jButton2.setForeground(new java.awt.Color(0, 0, 153));
         jButton2.setText("Search for Doctor");
@@ -126,7 +128,7 @@ public class PatientFrame extends javax.swing.JFrame {
 
         jSplitPane1.setLeftComponent(jPanel1);
 
-        jPanel2.setBackground(new java.awt.Color(255, 255, 204));
+        jPanel2.setBackground(new java.awt.Color(102, 204, 255));
 
         jLabel1.setFont(new java.awt.Font("Cambria", 3, 48)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(153, 0, 0));

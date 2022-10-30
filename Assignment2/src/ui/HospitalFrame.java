@@ -60,6 +60,8 @@ public class HospitalFrame extends javax.swing.JFrame {
 
         jSplitPane1.setDividerLocation(170);
 
+        jPanel1.setBackground(new java.awt.Color(0, 102, 255));
+
         jButton1.setFont(new java.awt.Font("Cambria", 0, 14)); // NOI18N
         jButton1.setForeground(new java.awt.Color(0, 0, 153));
         jButton1.setText("Patient Registration");
@@ -138,11 +140,11 @@ public class HospitalFrame extends javax.swing.JFrame {
 
         jSplitPane1.setLeftComponent(jPanel1);
 
-        jPanel2.setBackground(new java.awt.Color(204, 0, 51));
+        jPanel2.setBackground(new java.awt.Color(102, 204, 255));
 
         jLabel1.setBackground(new java.awt.Color(255, 255, 102));
         jLabel1.setFont(new java.awt.Font("Cambria", 3, 48)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel1.setForeground(new java.awt.Color(153, 0, 51));
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel1.setText("Hey There Hospital Admin!");
 

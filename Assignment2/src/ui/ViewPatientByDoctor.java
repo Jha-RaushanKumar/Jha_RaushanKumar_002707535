@@ -464,7 +464,6 @@ public class ViewPatientByDoctor extends javax.swing.JPanel {
             selected_row[i] = model.getValueAt(row_selected, i);
 
         }
-        patientDirectory.deletePatient(model.getValueAt(row_selected, 9).toString());
         selected_row[0] = txtName.getText();
         selected_row[1] = txtGender.getText();
         selected_row[2] = txtDate.getText();

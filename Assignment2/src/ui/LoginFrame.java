@@ -59,11 +59,11 @@ public class LoginFrame extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jLabel1.setFont(new java.awt.Font("Baskerville Old Face", 0, 18)); // NOI18N
+        jLabel1.setFont(new java.awt.Font("Baskerville Old Face", 0, 24)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(0, 0, 153));
         jLabel1.setText("User Name:");
 
-        jLabel2.setFont(new java.awt.Font("Bookman Old Style", 0, 18)); // NOI18N
+        jLabel2.setFont(new java.awt.Font("Bookman Old Style", 0, 24)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(0, 0, 153));
         jLabel2.setText("Password:");
 
@@ -83,11 +83,11 @@ public class LoginFrame extends javax.swing.JFrame {
             }
         });
 
-        buttonSystem.setFont(new java.awt.Font("Bookman Old Style", 0, 14)); // NOI18N
+        buttonSystem.setFont(new java.awt.Font("Bookman Old Style", 0, 18)); // NOI18N
         buttonSystem.setForeground(new java.awt.Color(255, 51, 51));
         buttonSystem.setText("System");
 
-        buttonPatient.setFont(new java.awt.Font("Bookman Old Style", 0, 14)); // NOI18N
+        buttonPatient.setFont(new java.awt.Font("Bookman Old Style", 0, 18)); // NOI18N
         buttonPatient.setForeground(new java.awt.Color(255, 51, 51));
         buttonPatient.setText("Patient");
         buttonPatient.addActionListener(new java.awt.event.ActionListener() {
@@ -96,15 +96,15 @@ public class LoginFrame extends javax.swing.JFrame {
             }
         });
 
-        buttonDOctor.setFont(new java.awt.Font("Bookman Old Style", 0, 14)); // NOI18N
+        buttonDOctor.setFont(new java.awt.Font("Bookman Old Style", 0, 18)); // NOI18N
         buttonDOctor.setForeground(new java.awt.Color(255, 51, 51));
         buttonDOctor.setText("Doctor");
 
-        buttonHospital.setFont(new java.awt.Font("Bookman Old Style", 0, 14)); // NOI18N
+        buttonHospital.setFont(new java.awt.Font("Bookman Old Style", 0, 18)); // NOI18N
         buttonHospital.setForeground(new java.awt.Color(255, 51, 51));
         buttonHospital.setText("Hospital");
 
-        buttonCommunity.setFont(new java.awt.Font("Bookman Old Style", 0, 14)); // NOI18N
+        buttonCommunity.setFont(new java.awt.Font("Bookman Old Style", 0, 18)); // NOI18N
         buttonCommunity.setForeground(new java.awt.Color(255, 51, 51));
         buttonCommunity.setText("Community");
         buttonCommunity.addActionListener(new java.awt.event.ActionListener() {
@@ -161,7 +161,7 @@ public class LoginFrame extends javax.swing.JFrame {
                                 .addComponent(buttonHospital, javax.swing.GroupLayout.PREFERRED_SIZE, 127, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(18, 18, 18)
                                 .addComponent(buttonCommunity, javax.swing.GroupLayout.PREFERRED_SIZE, 134, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addComponent(buttonLogin))))
+                            .addComponent(buttonLogin, javax.swing.GroupLayout.PREFERRED_SIZE, 164, javax.swing.GroupLayout.PREFERRED_SIZE))))
                 .addContainerGap(26, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addGap(0, 0, Short.MAX_VALUE)

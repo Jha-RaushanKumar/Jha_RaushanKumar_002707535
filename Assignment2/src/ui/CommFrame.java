@@ -205,6 +205,8 @@ public class CommFrame extends javax.swing.JFrame {
 
         jSplitPane1.setDividerLocation(200);
 
+        jPanel3.setBackground(new java.awt.Color(0, 102, 255));
+
         jButton10.setFont(new java.awt.Font("Cambria", 0, 14)); // NOI18N
         jButton10.setForeground(new java.awt.Color(0, 0, 153));
         jButton10.setText("Community");
@@ -231,7 +233,7 @@ public class CommFrame extends javax.swing.JFrame {
                 .addContainerGap()
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jButton10, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(buttonReturn1, javax.swing.GroupLayout.DEFAULT_SIZE, 147, Short.MAX_VALUE)))
+                    .addComponent(buttonReturn1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
         );
         jPanel3Layout.setVerticalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -245,7 +247,7 @@ public class CommFrame extends javax.swing.JFrame {
 
         jSplitPane1.setLeftComponent(jPanel3);
 
-        jPanel4.setBackground(new java.awt.Color(255, 255, 204));
+        jPanel4.setBackground(new java.awt.Color(102, 204, 255));
 
         jLabel2.setFont(new java.awt.Font("Cambria", 3, 48)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(153, 0, 0));
@@ -257,7 +259,7 @@ public class CommFrame extends javax.swing.JFrame {
         jPanel4Layout.setHorizontalGroup(
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel4Layout.createSequentialGroup()
-                .addContainerGap(190, Short.MAX_VALUE)
+                .addContainerGap(236, Short.MAX_VALUE)
                 .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 735, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(155, 155, 155))
         );

@@ -125,22 +125,6 @@ public class CreatePersonn extends javax.swing.JPanel {
         jLabel10.setForeground(new java.awt.Color(0, 0, 153));
         jLabel10.setText("Community:");
 
-        txtName.setText("Raushan");
-
-        txtGender.setText("Male");
-
-        txtDate.setText("2/2/22");
-
-        txtPersonId.setText("22");
-
-        txtAddress.setText("ParkerStreet");
-
-        txtCity.setText("Boston");
-
-        txtState.setText("MA");
-
-        txtZip.setText("021200");
-
         txtCommunity.setText("Northeastern");
 
         buttonSave.setText("Save Person");

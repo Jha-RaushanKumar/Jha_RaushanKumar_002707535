@@ -117,13 +117,13 @@ public class ViewPatientByPatient extends javax.swing.JPanel {
 
         tablePatient.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null, null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null, null, null, null}
+                {null, null, null, null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null, null, null, null}
             },
             new String [] {
-                "Name", "Gender", "Date of Birth", "Person ID", "Address", "City", "State", "Zip", "Community", "Patient ID"
+                "Name", "Gender", "Date of Birth", "Person ID", "Address", "City", "State", "Zip", "Community", "Patient ID", "Encoun. Date"
             }
         ));
         jScrollPane1.setViewportView(tablePatient);
@@ -445,7 +445,7 @@ public class ViewPatientByPatient extends javax.swing.JPanel {
             return;
         }
         DefaultTableModel model = (DefaultTableModel) tablePatient.getModel();
-        Object[] selected_row = new Object[10];
+        Object[] selected_row = new Object[11];
         for (int i = 0; i < model.getColumnCount(); i++) {
             selected_row[i] = model.getValueAt(row_selected, i);
 
@@ -462,7 +462,7 @@ public class ViewPatientByPatient extends javax.swing.JPanel {
         selected_row[8] = txtCommunity.getText();
         selected_row[9] = Integer.valueOf(txtPatientId.getText());
 
-        Date resultdate = new Date(System.currentTimeMillis());
+        Date resultdate = null;
         City city = new City(selected_row[5].toString());
         VitalSigns vs = new VitalSigns(0,0,0);
         Encounter encounter = new Encounter(vs,resultdate,null);
@@ -566,7 +566,7 @@ private void populateTable() {
         
         for(Patient patient : patientDirectory.getPatients()){
             
-            Object[] data = new Object[10];
+            Object[] data = new Object[11];
             data[0] = patient.getName();
             data[1] = patient.getGender();
             data[2] = patient.getDob();
@@ -577,6 +577,7 @@ private void populateTable() {
             data[7] = patient.getResidence().getPin();
             data[8] = patient.getResidence().getCommunity();
             data[9] = patient.getPatientId();
+            data[10] = patient.getEncounter().getEncDate();
             
             model.addRow(data);
             
@@ -590,7 +591,7 @@ private void populateTable(PatientDirectory patientDirectory1) {
         
         for(Patient patient : patientDirectory1.getPatients()){
             
-            Object[] data = new Object[10];
+            Object[] data = new Object[11];
             data[0] = patient.getName();
             data[1] = patient.getGender();
             data[2] = patient.getDob();
@@ -601,6 +602,7 @@ private void populateTable(PatientDirectory patientDirectory1) {
             data[7] = patient.getResidence().getPin();
             data[8] = patient.getResidence().getCommunity();
             data[9] = patient.getPatientId();
+            data[10] = patient.getEncounter().getEncDate();
             
             model.addRow(data);
             

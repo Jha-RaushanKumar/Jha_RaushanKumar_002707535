@@ -492,7 +492,7 @@ public class ViewPatient extends javax.swing.JPanel {
         selected_row[8] = txtCommunity.getText();
         selected_row[9] = Integer.valueOf(txtPatientId.getText());
         
-        Date resultdate = new Date(System.currentTimeMillis());
+        Date resultdate = null;
         City city = new City(selected_row[5].toString());
         VitalSigns vs = new VitalSigns(0,0,0);
         Encounter encounter = new Encounter(vs,resultdate,null);
